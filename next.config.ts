@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {  // ✅ No explicit type needed
+  output: "export",
+  images: { unoptimized: true },
+  compiler: {
+    styledComponents: true,
+  }, 
 };
 
 export default nextConfig;
