@@ -41,7 +41,7 @@ export default function GithubCard() {
             </div>
             <div className="glitchCard-stat">
               <span className="glitchCard-stat-label">FOLLOWERS</span>
-              <span className="glitchCard-stat-value" data-text="42k">
+              <span className="glitchCard-stat-value" data-text="12">
                 42k
               </span>
             </div>

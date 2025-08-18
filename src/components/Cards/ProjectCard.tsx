@@ -12,7 +12,7 @@ export default function ProjectCard() {
       {projectData.map((card, idx) => (
         <motion.article
           key={idx}
-          className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md transition-all hover:shadow-lg hover:border-pink-300/40"
+          className="flex flex-col justify-between bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md transition-all hover:shadow-lg hover:border-pink-300/40"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 * idx }}
@@ -46,19 +46,15 @@ export default function ProjectCard() {
           />
 
           {/* Links */}
-          <div>
-            <div className="mt-2 py-2">
-              <a href={card.readMoreLink}>
-                <ReadButton text="Read More" />
-              </a>
-            </div>
-            <div>
-                {/* <GithubButton1
-                  githubLink={card.githubLink}
-                  className="mt-2"
-                /> */}
-            </div>
-          </div>
+        <div className="mt-4 flex justify-between items-center">
+          <a href={card.githubLink} className="flex items-center h-12">
+            <GithubButton1 />
+          </a>
+          
+          <a href={card.readMoreLink} className="flex items-center h-12">
+            <ReadButton text="Read More" />
+          </a>
+        </div>
 
 
         </motion.article>

@@ -1,6 +1,7 @@
 'use client';
 import { motion } from "framer-motion";
 import { ExperienceData, cardVariants } from "@/constants/ExperienceData";
+import GithubButton1 from "../Github/GithubButton1";
 
 export default function ExperienceCard() {
   return (
@@ -12,7 +13,7 @@ export default function ExperienceCard() {
                     variants={cardVariants}
                     initial="hidden"
                     animate="visible"
-                    className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md transition-all hover:shadow-lg hover:border-white/20"
+                    className="flex flex-col justify-between bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md transition-all hover:shadow-lg hover:border-white/20"
                 >
                     {/* TIMELINE DOT */}
                     <div className="absolute -left-3 top-6 w-4 h-4 rounded-full bg-primary border-pink-300 border-3 shadow" />
@@ -30,12 +31,13 @@ export default function ExperienceCard() {
                         <p className="text-sm text-white/80 font-medium">{exp.company}</p>
                         
                         <p className="text-white/70 mt-2 text-sm">{exp.description}</p>
-                        <div className="mt-2 py-2">
-                        <a href={exp.readMoreLink}>
-                            <button className="readButton">
-                            Read More
-                            </button>
-                        </a>
+                        <div className="mt-2 py-2 flex justify-between items-center">
+                            <GithubButton1/>
+                            <a href={exp.readMoreLink}>
+                                <button className="readButton">
+                                Read More
+                                </button>
+                            </a>
                     </div>
                 </motion.div>
             ))}
