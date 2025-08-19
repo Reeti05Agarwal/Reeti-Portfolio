@@ -7,7 +7,7 @@ export const ExperienceData = [
     period: "August 2024 - Present",
     description:
       "Worked on AI-driven malware detection, NLP-based threat analysis, and regulatory AI system compliance.",
-    readMoreLink: "https://deepcytes.com/careers",
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Blockchain-Club",
   },
   {
     role: "Cyber Intern",
@@ -15,7 +15,7 @@ export const ExperienceData = [
     period: "March 2025 - Present",
     description:
       "Conducting research on AI-driven threats, dark web intelligence, and counter-surveillance; supporting legal and policy cases with insights on cyber risks, compliance gaps, and digital forensics.",
-    readMoreLink: "https://deepcytes.com/careers",
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Deepcytes-Cyber-Lab",
   },
   {
     role: "Cyber Intern",
@@ -23,7 +23,7 @@ export const ExperienceData = [
     period: "Feb 2025 - Present",
     description:
       "Research on vulnerabilities. Pentesting.",
-    readMoreLink: "https://deepcytes.com/careers",
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Rosche-System",
   },
   {
     role: "Intern",
@@ -31,7 +31,7 @@ export const ExperienceData = [
     period: "16 Dec - 24 Dec 2024",
     description:
       "Observed investigations into phishing, QR scams, and WhatsApp hacks. Gained hands-on exposure to digital forensics and social media tracking. Analyzed 10+ cases to inform local cybercrime prevention efforts.",
-    readMoreLink: "https://deepcytes.com/careers",
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Crime-Department,-Indore",
   },
   {
     role: "Cisco Virtual Internship",
@@ -39,7 +39,7 @@ export const ExperienceData = [
     period: "May - July 2024",
     description:
       "Completed hands-on training in networking and cybersecurity fundamentals. Designed secure network topologies and practiced device configurations and troubleshooting using Cisco Packet Tracer",
-    readMoreLink: "https://deepcytes.com/careers",
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cisco-Virtual-Internship",
   },
   {
     role: "Cyber Security Intern",
@@ -48,7 +48,7 @@ export const ExperienceData = [
     description:
       "Gained practical experience in core cybersecurity concepts, including system/network security, offensive and defensive techniques, and Linux fundamentals. Applied skills through hands-on labs and real-world simulation exercises.",
     // tags: [];
-    readMoreLink: "https://deepcytes.com/careers",
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Secured-India",
   },
 ];
 
