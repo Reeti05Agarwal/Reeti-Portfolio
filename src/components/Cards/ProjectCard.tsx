@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from "framer-motion"; 
-import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion";  
 import { projectData, ProjectData } from "@/constants/ProjectData";
 import GithubButton1 from "../Github/GithubButton1";
 import ReadButton from "../Buttons/ReadButton";
