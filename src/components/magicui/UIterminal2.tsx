@@ -102,7 +102,7 @@ export const UITerminal2 = ({ children, className }: TerminalProps) => {
   return (
     <div
       className={cn(
-        "z-0 h-full max-h-[400px] w-full max-w-lg rounded-xl shadow-xl backdrop-blur-lg border border-purple-300/40 bg-black/60",
+        "z-0 h-full max-h-[500px] w-full max-w-2xl rounded-xl shadow-xl backdrop-blur-lg border border-purple-300/40 bg-black/60",
         className,
       )}
     >

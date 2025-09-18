@@ -103,15 +103,15 @@ export const UITerminal = ({ children, className, head_text }: TerminalProps) =>
   return (
     <div
       className={cn(
-        "z-0 h-full max-h-[400px] w-full max-w-lg rounded-xl bg-black/60",
+        "z-0 h-full max-h-[400px] w-full max-w-lg rounded-xl border-purple-300/40 bg-black/80",
         className,
       )}
     >
-      <div className="flex flex-col gap-y-1 border-b border-border p-2 px-4">
+      <div className="flex flex-col gap-y-1 border-b border-purple-300/40 p-2 px-4">
         <div className="flex flex-row items-center gap-x-2">
           {/* 👇 Your custom animated Terminal icon */}
-          <Terminal className="text-pink-400 mr-2 animate-pulse" />
-          <span className="text-pink-400 font-mono text-sm">{head_text}</span>
+          <Terminal className="text-blue-300 mr-2" />
+          <span className="text-blue-300 font-mono text-sm">{head_text}</span>
         </div>
       </div>
 

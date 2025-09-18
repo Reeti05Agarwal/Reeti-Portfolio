@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Orbitron } from "next/font/google";
 import Navbar from "@/components/Navbar";  
  
 
@@ -7,6 +7,8 @@ import Navbar from "@/components/Navbar";
 
 
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+const orbitron = Orbitron({ subsets: ["latin"], weight: ["400", "700"] });
+
 
 export const metadata = {
   title: "Reeti | Portfolio",

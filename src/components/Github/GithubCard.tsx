@@ -4,6 +4,9 @@ export default function GithubCard() {
       <div className="glitchCard-card">
         <div className="glitchCard-header"></div>
         <div className="glitchCard-avatar">
+          <img>
+
+          </img>
           {/* <svg
             className="glitchCard-octocat"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,12 +45,14 @@ export default function GithubCard() {
             <div className="glitchCard-stat">
               <span className="glitchCard-stat-label">FOLLOWERS</span>
               <span className="glitchCard-stat-value" data-text="12">
-                42k
+                1
               </span>
             </div>
           </div>
           <a
             href="http://github.com/Reeti05Agarwal"
+            target="_blank" 
+            rel="noopener noreferrer"
             className="glitchCard-button"
             data-text="VIEW_ON_GITHUB"
           >
@@ -58,3 +63,14 @@ export default function GithubCard() {
     </div>
   );
 }
+{/* Github Card */}
+              {/* <div className="flex flex-col md:basis-1/5 h-full">
+                <div className="h-full items-stretch  ">
+                  <div className="w-full">
+                    <GithubCard /> 
+                  </div>
+                  <div  className="w-full">
+                    <TryhackmeBadge />
+                  </div>
+                </div>
+              </div> */}

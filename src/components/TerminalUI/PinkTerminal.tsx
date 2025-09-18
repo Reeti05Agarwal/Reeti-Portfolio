@@ -10,20 +10,22 @@ export default function PinkTerminal() {
 
       <div className="text-pink-200 font-mono space-y-3 text-sm md:text-base leading-relaxed">
         <div>
-          <span className="terminal-glow-pink text-lg">reeti@portfolio:~$</span>{" "}
-          <span className="text-white">whoami</span>{" "}
+          <span className="terminal-glow-pink text-xl">reeti@portfolio:~$</span>{" "}
+          <span className="text-white font-bold text-xl">whoami</span>{" "}
           <span className="text-pink-400 cursor">|</span>
         </div>
-        <div className="text-2xl font-bold text-pink-300">Reeti Agarwal</div>
-        <div className="italic text-pink-400 text-sm md:text-base">
-          Hacker | TryHackMe | eJPT
+        <div className="text-3xl font-bold text-pink-300">Reeti Agarwal</div>
+        <div className="text-blue-300 font-bold text-sm md:text-base">
+          Aspiring CyberSecurity Professional 
           <br />
-          3rd Year BTech Student at Symbiosis Institute of Technology
+          CTF Player | TryHackMe | eJPT
+          <br />
+          
         </div>
 
         <div className="pt-4">
-          <span className="terminal-glow-pink text-lg">reeti@portfolio:~$</span>{" "}
-          <span className="text-white">cat About_Reeti.txt</span>{" "}
+          <span className="terminal-glow-pink text-xl">reeti@portfolio:~$</span>{" "}
+          <span className="text-white font-bold text-xl">cat About_Reeti.txt</span>{" "}
           <span className="text-pink-400 cursor">|</span>
         </div>
         <p>

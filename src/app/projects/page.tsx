@@ -5,7 +5,7 @@ import TerminalHeading from "@/components/TerminalUI/TerminalHeading";
 
 export default function ProjectsPage() {
   return (
-    <main className="px-70 pt-24 p-1 mx-auto mt-5">
+    <main className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-70 pt-24">
       <motion.div
         className="mb-4"
         initial={{ opacity: 0, y: -10 }}

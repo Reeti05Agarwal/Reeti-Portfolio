@@ -1,15 +1,13 @@
 'use client';
 
-import { motion } from "framer-motion"; 
-import { Badge } from "@/components/ui/badge"
-import { projectData, ProjectData } from "@/constants/ProjectData";
-import GithubButton1 from "../Github/GithubButton1";
+import { motion } from "framer-motion";  
+import { researchData, ResearchData } from "@/constants/ResearchData"; 
 import ReadButton from "../Buttons/ReadButton";
  
-export default function ProjectCard() {
+export default function ResearchCard() {
   return (
     <div className="grid gap-8 sm:grid-cols-2">
-      {projectData.map((card, idx) => (
+      {researchData.map((card, idx) => (
         <motion.article
           key={idx}
           className="flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md transition-all hover:shadow-lg hover:border-pink-300/40"
@@ -23,8 +21,7 @@ export default function ProjectCard() {
           </h2>
 
           {/* Description */}
-          {/* <p className="mt-1 text-white/60 text-sm">{card.author}</p> */}
-          <p className="mt-3 text-white/80 text-md">{card.description}</p>
+          <p className="mt-1 text-white/60 text-sm">{card.date}</p> 
           
           {/* Badges */}
           <div className="mt-2 flex flex-wrap gap-2">
@@ -36,25 +33,9 @@ export default function ProjectCard() {
                 {tag}
               </span>
             ))}
-          </div>
-          
-          {/* Image */}
-          <img
-            src={card.image}
-            alt={card.title}
-            className="mt-4 w-full h-40 object-cover rounded-lg"
-          />
-
+          </div> 
           {/* Links */}
-        <div className="mt-4 mb-2 flex sm:flex-col md:flex-col gap-2 justify-between items-center">
-          <a 
-            href={card.githubLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center h-12">
-            <GithubButton1 />
-          </a>
-          
+        <div className="mt-4 flex justify-between items-center"> 
           <a 
             href={card.readMoreLink} 
             target="_blank" 

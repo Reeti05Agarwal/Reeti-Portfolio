@@ -1,15 +1,15 @@
 'use client';
 
-import { motion } from "framer-motion"; 
-import { Badge } from "@/components/ui/badge"
-import { projectData, ProjectData } from "@/constants/ProjectData";
-import GithubButton1 from "../Github/GithubButton1";
+import { motion } from "framer-motion";  
+import { achData, AchData } from "@/constants/AchData"; 
 import ReadButton from "../Buttons/ReadButton";
- 
-export default function ProjectCard() {
+import LinkedinButtons from "../Buttons/LinkedinButton";
+import LinkedinButton from "../Buttons/LinkedinButton";
+  
+export default function CtfCard() {
   return (
     <div className="grid gap-8 sm:grid-cols-2">
-      {projectData.map((card, idx) => (
+      {achData.map((card, idx) => (
         <motion.article
           key={idx}
           className="flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md transition-all hover:shadow-lg hover:border-pink-300/40"
@@ -23,7 +23,11 @@ export default function ProjectCard() {
           </h2>
 
           {/* Description */}
-          {/* <p className="mt-1 text-white/60 text-sm">{card.author}</p> */}
+          <div className="flex justify-between items-center">
+            <p className="flex mt-1 text-white/80 text-sm">{card.organised}</p>
+            <p className="flex mt-1 text-white/70 text-sm">{card.date}</p>
+          </div> 
+          <p className="mt-1 text-green-300 font-bold text-lg">{card.position}</p>
           <p className="mt-3 text-white/80 text-md">{card.description}</p>
           
           {/* Badges */}
@@ -36,25 +40,9 @@ export default function ProjectCard() {
                 {tag}
               </span>
             ))}
-          </div>
-          
-          {/* Image */}
-          <img
-            src={card.image}
-            alt={card.title}
-            className="mt-4 w-full h-40 object-cover rounded-lg"
-          />
-
+          </div> 
           {/* Links */}
-        <div className="mt-4 mb-2 flex sm:flex-col md:flex-col gap-2 justify-between items-center">
-          <a 
-            href={card.githubLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center h-12">
-            <GithubButton1 />
-          </a>
-          
+        <div className="mt-4 flex justify-between items-center"> 
           <a 
             href={card.readMoreLink} 
             target="_blank" 
@@ -62,7 +50,11 @@ export default function ProjectCard() {
             className="flex items-center h-12"
           >
             <ReadButton text="Read More" />
-          </a>
+          </a> 
+          {/* <div className="flex items-center h-12">
+            <LinkedinButton/>
+          </div> */}
+          
         </div>
 
 

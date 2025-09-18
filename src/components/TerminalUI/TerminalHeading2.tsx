@@ -12,10 +12,10 @@ const TerminalHeading2: React.FC<Terminal2Props> = ({ text, pre_text})  => {
       
     <UITerminal2 >
         <span>
-          <span className="text-pink-200 terminal-glow-pink text-xl">
+          <span className="text-blue-200 terminal-glow-blue text-lg">
             {pre_text}
           </span>
-          <span className="text-purple-300 text-xl terminal-glow-p">
+          <span className="text-purple-300 text-2xl font-bold">
             {text} 
           </span>
           <span className="text-pink-400 cursor">  |</span>

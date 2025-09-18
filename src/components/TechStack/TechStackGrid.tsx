@@ -27,12 +27,7 @@ const stack = [
     name: "React",
     icon: <ReactIcon />,
     description: "JavaScript library for building interactive user interfaces and single-page applications.",
-  },
-  {
-    name: "Linux",
-    icon: <LinuxIcon />,
-    description: "Open-source operating system widely used for servers, development, and cybersecurity.",
-  },
+  }, 
   {
     name: "MongoDB",
     icon: <MongoDBIcon />,
@@ -62,11 +57,11 @@ const stack = [
 
 export default function TechStackGrid() {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
       {stack.map((tech) => (
         <Popover key={tech.name}>
           <PopoverTrigger>
-            <div className="flex flex-col items-center justify-center rounded-lg bg-black p-4 text-white border backdrop-blur-md border-zinc-700 hover:scale-105 hover:bg-transparent hover:text-white hover:text-shadow-pink hover:border-purple-300 transition-transform duration-200 cursor-pointer">
+            <div className="flex flex-col items-center justify-center rounded-lg bg-black p-4 text-white border backdrop-blur-md border-zinc-700 hover:scale-105 hover:bg-black/30 hover:text-white hover:text-shadow-pink hover:border-purple-300 transition-transform duration-200 cursor-pointer">
               <div className="w-10 h-12 mb-2">
                 {tech.icon}
               </div>

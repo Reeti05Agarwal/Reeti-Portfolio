@@ -1,4 +1,11 @@
- 
+export interface ExperienceData {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  readMoreLink?: string;
+  tags?: string[]; // optional, in case you want to add skills/stack per experience
+}
 
 export const ExperienceData = [
   {
