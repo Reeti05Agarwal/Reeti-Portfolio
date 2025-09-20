@@ -31,7 +31,7 @@ export default function CtfCard() {
           <p className="mt-3 text-white/80 text-md">{card.description}</p>
           
           {/* Badges */}
-          <div className="mt-2 flex flex-wrap gap-2">
+          {/* <div className="mt-2 flex flex-wrap gap-2">
             {card.tags.map((tag, tagIdx) => (
               <span
                 key={tagIdx}
@@ -40,7 +40,7 @@ export default function CtfCard() {
                 {tag}
               </span>
             ))}
-          </div> 
+          </div>  */}
           {/* Links */}
         <div className="mt-4 flex justify-between items-center"> 
           <a 

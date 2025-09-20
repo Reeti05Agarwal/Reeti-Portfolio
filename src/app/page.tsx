@@ -1,28 +1,22 @@
 'use client'; 
-import TryhackmeBadge from "@/components/Icons/TryhackmeBadge"; 
-import Link from "next/link"; 
+import TryhackmeBadge from "@/components/Icons/TryhackmeBadge";  
 import TechStackGrid from "@/components/TechStack/TechStackGrid";
 import SkillStackGrid from "@/components/TechStack/SkillStackGrid";
-import ToolStackGrid from "@/components/TechStack/ToolStackGrid"; 
-import ProjectCard from "@/components/Cards/ProjectCard";
-import ContactCard from "@/components/Cards/ContactCard"; 
-import ExperienceCard from "@/components/Cards/ExperienceCard";   
-import PinkTerminal from "@/components/TerminalUI/PinkTerminal";
-import GithubCard from "@/components/Github/GithubCard";  
+import ToolStackGrid from "@/components/TechStack/ToolStackGrid";  
+import ContactCard from "@/components/Cards/ContactCard";   
+import PinkTerminal from "@/components/TerminalUI/PinkTerminal";  
 import DownloadButton from "@/components/Buttons/DownloadButton"; 
 import SocialMediaButtons from "@/components/Buttons/SocialMediaButtons";  
 import TerminalHeading from "@/components/TerminalUI/TerminalHeading";
 import BlueBotton from "@/components/Buttons/BlueButton";
 import BlogCard from "@/components/Cards/BlogCard";
-import TerminalHeading2 from "@/components/TerminalUI/TerminalHeading2";
-import MoreButton from "@/components/Buttons/MoreButton";
+import TerminalHeading2 from "@/components/TerminalUI/TerminalHeading2"; 
 import RecentProjects from "@/components/Cards/RecentProjects";
 import RecentExperience from "@/components/Cards/RecentExperience";
 import CtfCard from "@/components/Cards/CtfCard";
 import HackCard from "@/components/Cards/HackCard";
 import ResearchCard from "@/components/Cards/ResearchCard";
-import CertCard from "@/components/Cards/CertCard";
-import { Badge } from "lucide-react";
+import CertCard from "@/components/Cards/CertCard"; 
 
 
 export default function Home() {
