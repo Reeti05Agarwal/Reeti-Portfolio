@@ -82,7 +82,7 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Hackathon */}
+            {/* Hackathon Cards*/} 
             <div className="flex flex-col md:basis-1/3 gap-0.1">
               <div className="mb-4"> 
                 <TerminalHeading head_text="reeti@root:/home/Achievements~$" text="ls _Hackathon_" />
