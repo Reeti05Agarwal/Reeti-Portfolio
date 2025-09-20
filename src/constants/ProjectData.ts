@@ -18,12 +18,12 @@ export const projectData: ProjectData[] = [
     githubLink: "https://github.com/Reeti05Agarwal/TraceProbe",
   },
   {
-    title: "NexGaurd",
-    tags: ["Python", "Machine Learning", "Cloud", ],
+    title: "NexGuard",
+    tags: ["Python", "Machine Learning", "Cloud", "Flet"],
     description:
       "Designed a secure, AI-based system for real-time fraud detection and behavior analysis. Utilized knowledge distillation, time-series RNNs, and explainability tools (LIME) to ensure efficient and transparent decision-making.",
     image: "/images/cat.png",
-    readMoreLink: "https://example.com/steel-ball-run",
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Projects/NexGaurd",
     githubLink: "https://github.com/Reeti05Agarwal/NexGaurd",
   },
   {
@@ -33,17 +33,8 @@ export const projectData: ProjectData[] = [
       "Developed a Rule-based Network Intrusion Detection (NID) system incorporating real-time packet inspection, slashing network breaches by 15% and flagging 200+ suspicious packetsdaily.",
     image: "/images/cat.png", // store in /public/images,
     readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Projects/Network-Intrusion-System-(NIDS)",
-    githubLink: "https://github.com/Reeti05Agarwal/NIDS/tree/main",
-  },
-  // {
-  //   title: "AI-Powered Cybersecurity Assistant",
-  //   tags: ["Python", "Machine Learning", "Cloud", ],
-  //   description:
-  //     "Designed a secure, AI-based system for real-time fraud detection and behavior analysis. Utilized knowledge distillation, time-series RNNs, and explainability tools (LIME) to ensure efficient and transparent decision-making.",
-  //   image: "/images/cat.png",
-  //   readMoreLink: "https://example.com/steel-ball-run",
-  //   githubLink: "",
-  // },
+    githubLink: "https://github.com/Reeti05Agarwal/NIDSs",
+  }, 
 
   // {
   //   title: " ",

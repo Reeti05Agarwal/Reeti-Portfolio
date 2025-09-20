@@ -38,11 +38,11 @@ export default function SocialMediaButtons() {
                 </div>
                 <div className="icon-content">
                     <a
-                        href="https://medium.com/@reeti05agarwal"
+                        href="https://reeti05agarwal.github.io/Tech_Blogs/"
                         target="_blank" 
                         rel="noopener noreferrer"
                         aria-label="Tech Blogs"
-                        data-social="techblogs"
+                        data-social="blogs"
                     >
                     <div className="filled"></div>
                     <MediumIcon/>
