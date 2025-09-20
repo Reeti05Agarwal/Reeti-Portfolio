@@ -16,7 +16,7 @@ export const hackData: HackData[] = [
     date: "04-08-2023",
     tags: ["Java", "Security", "Network", "MySQL"],
     description: "",
-    readMoreLink: "https://example.com/steel-ball-run", 
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Hackathon/Cyber-Security-and-Blockchain-Hackathon", 
   },
   {
     title: "CyberShield Hackathon",
@@ -25,6 +25,6 @@ export const hackData: HackData[] = [
     date: "01-09-2025",
     tags: ["Kibana", "ElasticSearch", "postgres", ],
     description: "IPDR Analysis Tool",
-    readMoreLink: "https://example.com/steel-ball-run", 
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Hackathon/CyberShield", 
   },  
 ];

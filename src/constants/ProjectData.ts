@@ -34,16 +34,5 @@ export const projectData: ProjectData[] = [
     image: "/images/cat.png", // store in /public/images,
     readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Projects/Network-Intrusion-System-(NIDS)",
     githubLink: "https://github.com/Reeti05Agarwal/NIDSs",
-  }, 
-
-  // {
-  //   title: " ",
-  //   author: " ",
-  //   tags: [" " ],
-  //   description:
-  //     " ",
-  //   image: "/images/cat.png",
-  //   readMoreLink: " ",
-  //   githubLink: "",
-  // },
+  },  
 ];

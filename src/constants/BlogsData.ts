@@ -19,4 +19,10 @@ export const BlogsData = [
     date: "April 2025",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/N8N/01---N8N-Local-Setup",
   },
+  {
+    title: "Steganography",
+    summary: "Exploring Steganography techniques and tools for CTF.",
+    date: "April 2025",
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/CTF/Steganography",
+  },
 ];

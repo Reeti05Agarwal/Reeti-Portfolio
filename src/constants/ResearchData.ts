@@ -15,6 +15,6 @@ export const researchData: ResearchData[] = [
     tags: ["Quantum Computing", "Security", "Network", "MySQL"],
     // description:
     //   "Developed a Rule-based Network Intrusion Detection (NID) system incorporating real-time packet inspection, slashing network breaches by 15% and flagging 200+ suspicious packetsdaily.",
-    readMoreLink: "https://example.com/steel-ball-run", 
+    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Research-Paper/Quantum-Computing-Odyssey---Teleporting-to-the-Realm-of-Unparalleled-Possibilities", 
   }, 
 ];
