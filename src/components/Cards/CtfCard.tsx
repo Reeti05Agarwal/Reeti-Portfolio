@@ -27,7 +27,7 @@ export default function CtfCard() {
             <p className="flex mt-1 text-white/80 text-sm">{card.organised}</p>
             <p className="flex mt-1 text-white/70 text-sm">{card.date}</p>
           </div> 
-          <p className="mt-1 text-green-300 font-bold text-lg">{card.position}</p>
+          <p className="mt-1 text-cyan-300 font-bold text-lg">{card.position}</p>
           <p className="mt-3 text-white/80 text-md">{card.description}</p>
           
           {/* Badges */}

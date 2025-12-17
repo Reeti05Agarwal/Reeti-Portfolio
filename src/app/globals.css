@@ -137,6 +137,10 @@ a {
   text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33;
 }
 
+.terminal-glow-cyan {
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+}
+
 .terminal-glow-pink {
   text-shadow: 
     0 0 4px #f9a8d4, 
@@ -858,4 +862,111 @@ a {
 .example-2 .icon-content a[data-social="blogs"] .filled,
 .example-2 .icon-content a[data-social="blogs"] ~ .tooltip {
   background-color: #cf91ff;
+}
+
+
+/* Glass morphism effect */
+.glass-panel {
+  background: rgba(10, 10, 30, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 31, 63, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Cyberpunk text glow */
+.text-glow {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+/* Terminal cursor blink animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+  background-color: #00ffff;
+}
+
+/* Scanline animation for retro effect */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to bottom, 
+    transparent, 
+    rgba(0, 255, 255, 0.3), 
+    transparent);
+  animation: scanline 3s linear infinite;
+  pointer-events: none;
+  z-index: 20;
+}
+
+
+/* Cyberpunk Pink Glow Effects */
+.cyber-glow-pink {
+  box-shadow: 
+    0 0 10px rgba(255, 20, 145, 0.946),
+    0 0 20px rgba(255, 20, 147, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  
+}
+
+@keyframes cyber-glow-pink {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(226, 12, 126, 0.863),
+      0 0 40px rgba(255, 20, 147, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px rgba(255, 20, 147, 0.5),
+      0 0 60px rgba(255, 20, 147, 0.2),
+      0 0 80px rgba(255, 105, 180, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Text Glow Effects */
+.terminal-text-glow {
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
+}
+
+.terminal-prompt-glow {
+  text-shadow: 0 0 8px rgba(255, 20, 147, 0.5);
+}
+
+.command-glow {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Cursor Blink Animation */
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
 }

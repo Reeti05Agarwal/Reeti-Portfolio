@@ -1,36 +1,153 @@
-import { Terminal } from "lucide-react";
+// import { Terminal } from "lucide-react";
+
+// export default function PinkTerminal() {
+//   return (
+//     <div className="bg-black/70 p-6 rounded-2xl border border-pink-500/30 shadow-xl backdrop-blur-md">
+//       <div className="flex items-center mb-4">
+//         <Terminal className="text-pink-400 mr-2 animate-pulse" />
+//         <span className="text-pink-300 font-mono text-lg terminal-glow-pink">Terminal</span>
+//       </div>
+
+//       <div className="text-pink-200 font-mono space-y-3 text-sm md:text-base leading-relaxed">
+//         <div>
+//           <span className="terminal-glow-pink text-xl">reeti@portfolio:~$</span>{" "}
+//           <span className="text-white font-bold text-xl">whoami</span>{" "}
+//           <span className="text-pink-400 cursor">|</span>
+//         </div>
+//         <div className="text-3xl font-bold text-pink-300">Reeti Agarwal</div>
+//         <div className="text-blue-300 font-bold text-sm md:text-base">
+//           Aspiring CyberSecurity Professional 
+//           <br />
+//           CTF Player | TryHackMe | eJPT
+//           <br />
+          
+//         </div>
+
+//         <div className="pt-4">
+//           <span className="terminal-glow-pink text-xl">reeti@portfolio:~$</span>{" "}
+//           <span className="text-white font-bold text-xl">cat About_Reeti.txt</span>{" "}
+//           <span className="text-pink-400 cursor">|</span>
+//         </div>
+//         <p>
+//           Aspiring cybersecurity professional with a strong foundation in computer science, currently pursuing a BTech at Symbiosis Institute of Technology. I have hands-on experience through internships and projects in cybersecurity, digital forensics, data science, and Python programming.
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
+import { Terminal, Cpu, Zap, Shield } from "lucide-react";
 
 export default function PinkTerminal() {
   return (
-    <div className="bg-black/70 p-6 rounded-2xl border border-pink-500/30 shadow-xl backdrop-blur-md">
-      <div className="flex items-center mb-4">
-        <Terminal className="text-pink-400 mr-2 animate-pulse" />
-        <span className="text-pink-300 font-mono text-lg terminal-glow-pink">Terminal</span>
+    <div className="relative bg-black/50 p-8 rounded-2xl border-2 border-pink-500/40 shadow-2xl backdrop-blur-md cyber-glow-pink hover-lift group">
+      
+      {/* Cyberpunk Corner Accents */}
+      <div className="absolute top-3 left-3 w-3 h-3 border-l-2 border-t-2 border-pink-400 opacity-60"></div>
+      <div className="absolute top-3 right-3 w-3 h-3 border-r-2 border-t-2 border-pink-400 opacity-60"></div>
+      <div className="absolute bottom-3 left-3 w-3 h-3 border-l-2 border-b-2 border-pink-400 opacity-60"></div>
+      <div className="absolute bottom-3 right-3 w-3 h-3 border-r-2 border-b-2 border-pink-400 opacity-60"></div>
+      
+      {/* Animated Grid Background */}
+      <div className="absolute inset-0 rounded-2xl opacity-10 pointer-events-none"
+           style={{
+             backgroundImage: `
+               linear-gradient(rgba(255, 20, 147, 0.3) 1px, transparent 1px),
+               linear-gradient(90deg, rgba(255, 20, 147, 0.3) 1px, transparent 1px)
+             `,
+             backgroundSize: '20px 20px'
+           }} />
+
+      {/* Header with Enhanced Icons */}
+      <div className="flex items-center mb-6 relative z-10">
+        <div className="flex items-center gap-3">
+          <div className="relative">
+            <Terminal className="text-pink-400 w-6 h-6 animate-pulse" />
+            <div className="absolute -inset-1 bg-pink-400 rounded-full blur-sm opacity-30 animate-ping"></div>
+          </div>
+          <span className="text-pink-300 font-mono text-xl font-bold tracking-wider terminal-text-glow">
+            root@terminal:~
+          </span>
+        </div>
+        <div className="ml-auto flex gap-2">
+          <Cpu className="text-pink-400 w-4 h-4 animate-pulse" />
+          <Zap className="text-pink-400 w-4 h-4 animate-pulse delay-75" />
+          <Shield className="text-pink-400 w-4 h-4 animate-pulse delay-150" />
+        </div>
       </div>
 
-      <div className="text-pink-200 font-mono space-y-3 text-sm md:text-base leading-relaxed">
-        <div>
-          <span className="terminal-glow-pink text-xl">reeti@portfolio:~$</span>{" "}
-          <span className="text-white font-bold text-xl">whoami</span>{" "}
-          <span className="text-pink-400 cursor">|</span>
-        </div>
-        <div className="text-3xl font-bold text-pink-300">Reeti Agarwal</div>
-        <div className="text-blue-300 font-bold text-sm md:text-base">
-          Aspiring CyberSecurity Professional 
-          <br />
-          CTF Player | TryHackMe | eJPT
-          <br />
-          
+      {/* Terminal Content */}
+      <div className="text-pink-200 font-mono space-y-4 text-base leading-relaxed relative z-10">
+        
+        {/* First Command */}
+        <div className="flex items-start gap-2 group/command">
+          <span className="text-pink-400 font-bold text-lg whitespace-nowrap terminal-prompt-glow">
+            reeti@portfolio:~$
+          </span>
+          <span className="text-white font-bold text-lg command-glow">whoami</span>
+          <span className="text-pink-400 animate-pulse cursor-blink">▊</span>
         </div>
 
-        <div className="pt-4">
-          <span className="terminal-glow-pink text-xl">reeti@portfolio:~$</span>{" "}
-          <span className="text-white font-bold text-xl">cat About_Reeti.txt</span>{" "}
-          <span className="text-pink-400 cursor">|</span>
+        {/* Username Output */}
+        <div className="ml-4">
+          <div className="text-4xl font-bold bg-gradient-to-r from-pink-300 to-purple-400 bg-clip-text text-transparent hover:from-pink-400 hover:to-purple-300 transition-all duration-300">
+            Reeti Agarwal
+          </div>
         </div>
-        <p>
-          Aspiring cybersecurity professional with a strong foundation in computer science, currently pursuing a BTech at Symbiosis Institute of Technology. I have hands-on experience through internships and projects in cybersecurity, digital forensics, data science, and Python programming.
-        </p>
+
+        {/* Tagline */}
+        <div className="ml-4 flex flex-wrap gap-3 text-cyan-300 font-semibold text-sm">
+          <span className="px-3 py-1 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm hover:bg-cyan-400/20 hover:border-cyan-400/50 transition-all duration-200">
+            Aspiring Cybersecurity Professional
+          </span>
+          <span className="px-3 py-1 rounded-full border border-pink-400/30 bg-pink-400/10 backdrop-blur-sm hover:bg-pink-400/20 hover:border-pink-400/50 transition-all duration-200">
+            CTF Player
+          </span>
+          <span className="px-3 py-1 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm hover:bg-yellow-400/20 hover:border-yellow-400/50 transition-all duration-200">
+            TryHackMe
+          </span>
+          <span className="px-3 py-1 rounded-full border border-green-400/30 bg-green-400/10 backdrop-blur-sm hover:bg-green-400/20 hover:border-green-400/50 transition-all duration-200">
+            eJPT
+          </span>
+        </div>
+
+        {/* Second Command */}
+        <div className="flex items-start gap-2 group/command pt-6">
+          <span className="text-pink-400 font-bold text-lg whitespace-nowrap terminal-prompt-glow">
+            reeti@portfolio:~$
+          </span>
+          <span className="text-white font-bold text-lg command-glow">cat About_Reeti.txt</span>
+          <span className="text-pink-400 animate-pulse cursor-blink">▊</span>
+        </div>
+
+        {/* About Text */}
+        <div className="ml-4 p-4 rounded-lg border border-pink-400/20 bg-pink-400/5 backdrop-blur-sm hover:border-pink-400/30 hover:bg-pink-400/10 transition-all duration-300">
+          <p className="text-gray-200 leading-7">
+            Aspiring cybersecurity professional with a strong foundation in computer science, 
+            currently pursuing a BTech at <span className="text-cyan-300">Symbiosis Institute of Technology</span>. 
+            I have hands-on experience through internships and projects in{" "}
+            <span className="text-pink-300">cybersecurity</span>,{" "}
+            <span className="text-purple-300">digital forensics</span>,{" "}
+            <span className="text-blue-300">data science</span>, and{" "}
+            <span className="text-green-300">Python programming</span>.
+          </p>
+        </div>
+
+        {/* Status Bar */}
+        <div className="flex items-center gap-4 pt-4 text-xs text-pink-400/70 border-t border-pink-400/20 mt-6">
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span>SYSTEM: ONLINE</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
+            <span>USER: ACTIVE</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+            <span>TERMINAL: READY</span>
+          </div>
+        </div>
       </div>
     </div>
   );
