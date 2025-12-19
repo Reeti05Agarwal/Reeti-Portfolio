@@ -5,7 +5,7 @@ export interface HackData {
   date: string;
   tags: string[];
   description: string; 
-  readMoreLink?: string; 
+  link?: string; 
 }
 
 export const hackData: HackData[] = [
@@ -16,15 +16,15 @@ export const hackData: HackData[] = [
     date: "04-08-2023",
     tags: ["Java", "Security", "Network", "MySQL"],
     description: "",
-    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Hackathon/Cyber-Security-and-Blockchain-Hackathon", 
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/Hackathon/Cyber-Security-and-Blockchain-Hackathon", 
   },
   {
     title: "CyberShield Hackathon",
-    position: "",
+    position: "Participated",
     organised: "MP Police",
     date: "01-09-2025",
     tags: ["Kibana", "ElasticSearch", "postgres", ],
     description: "IPDR Analysis Tool",
-    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Hackathon/CyberShield", 
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/Hackathon/CyberShield", 
   },  
 ];

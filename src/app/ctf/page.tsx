@@ -1,10 +1,9 @@
 'use client';
 import { motion } from "framer-motion";   
-import BlogCard from "@/components/Cards/BlogCard";
+import CtfCard from "@/components/Cards/CtfCard";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-
-export default function BlogsPage() {
+export default function CtfPage() {
   return (
     <main className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-70 pt-24">
       <motion.div
@@ -14,13 +13,13 @@ export default function BlogsPage() {
         <div className="mb-8 group">
           <SectionHeading 
               directory="reeti@root:~$"
-              command="ls Tech_Blogs"
+              command="ls CTF_Competitions"
               description="Explore my technical arsenal"
               glowColor="cyan"
-          />   
+          />  
         </div>  
       </motion.div>
-      <BlogCard/>
+      <CtfCard/>
 
           
     </main>

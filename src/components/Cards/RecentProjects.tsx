@@ -1,79 +1,64 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { projectData } from "@/constants/ProjectData";
-import ReadButton from "../Buttons/ReadButton"; 
+import { projectData } from "@/constants/ProjectData"; 
 import GithubButton1 from "../Github/GithubButton1";
+import Image from "next/image";
 
 export default function RecentProjects() {
   const recentProjects = projectData.slice(0, 4); 
 
   return (
-    <div className="relative">
-      {/* Header with arrow button */}
-      {/* <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold text-pink-300">Recent Projects</h2>
-        <Link href="/projects" className="text-pink-300 hover:text-pink-400 transition">
-          <ArrowRight size={24} />
-        </Link>
-      </div> */}
-
-      {/* Project cards in one row */}
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {recentProjects.map((card, idx) => (
-          <motion.article
-            key={idx}
-            className="flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md transition-all hover:shadow-lg hover:border-pink-300/40"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 * idx }}
-          >
-            <h3 className="text-lg font-semibold text-pink-300">{card.title}</h3>
-            {/* <p className="mt-1 text-white/60 text-sm">{card.author}</p> */}
-            {/* <p className="mt-2 text-white/80 text-sm">{card.description}</p> */}
-
-            {/* Tags */}
-            <div className="mt-2 flex flex-wrap gap-2">
-              {card.tags.map((tag, tagIdx) => (
-                <span
-                  key={tagIdx}
-                  className="text-lg bg-blue-300/20 text-blue-300 px-2 py-0.5 rounded-md"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <p className="mt-3 text-white/80 text-sm">{card.description}</p>
-
-            {/* Image */}
-            {/* <img
-              src={card.image}
-              alt={card.title}
-              className="mt-4 w-full h-32 object-cover rounded-lg"
-            /> */}
-
-            {/* Read more */}
-            <div className="mt-4 mb-2 flex sm:flex-col md:flex-col gap-2 justify-between items-center">
-              <a 
-                href={card.githubLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center h-12">
-                <GithubButton1 />
-              </a>
+    <div className="relative w-full">
+      {/* Container with responsive padding and max-width */}
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        {/* Project cards with responsive grid */}
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {recentProjects.map((card, idx) => (
+            <motion.article
+              key={idx}
+              className="flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-3 sm:p-4 shadow-md hover:shadow-lg hover:border-gray-300/40"
               
-              <a 
-                href={card.readMoreLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center h-12"
-              >
-                <ReadButton text="Read More" />
-              </a>
-            </div>
-          </motion.article>
-        ))}
+            >
+              {/* Image Container with aspect ratio */}
+              <div className="mb-3 sm:mb-4 w-full aspect-video relative overflow-hidden rounded-lg">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  priority={idx < 2} // Priority load for first 2 images
+                />
+              </div>
+
+              {/* Content Section */}
+              <div className="flex-grow flex flex-col">
+                <h3 className="text-lg sm:text-xl font-semibold text-white line-clamp-1">
+                  {card.title}
+                </h3> 
+                
+                <p className="mt-2 text-white/80 text-xs sm:text-sm line-clamp-2 sm:line-clamp-3">
+                  {card.short}
+                </p>
+              </div>
+
+              {/* Buttons Container - Responsive layout */}
+              <div className="mt-4 sm:mt-6 flex flex-col gap-2 sm:gap-3">
+                <a 
+                  href={card.githubLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 flex justify-center items-center min-h-[44px] sm:min-h-[48px]"
+                >
+                  <GithubButton1 />
+                </a>
+                
+                 
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
     </div>
   );

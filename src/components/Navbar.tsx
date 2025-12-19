@@ -35,6 +35,18 @@ const navItems = [
     icon: <IconExchange className="h-5 w-5 text-white/80" />,
   }, 
   {
+    title: "~/CTF",
+    href: "/ctf",
+    icon: <IconExchange className="h-5 w-5 text-white/80" />,
+
+  },
+    {
+    title: "~/Certification",
+    href: "/certifications",
+    icon: <IconExchange className="h-5 w-5 text-white/80" />,
+
+  },
+  {
     title: "~/Resume",
     href: "/resume.pdf",
     icon: <IconBrandGithub className="h-5 w-5 text-white/80" />,

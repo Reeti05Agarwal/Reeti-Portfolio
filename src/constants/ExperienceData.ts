@@ -1,61 +1,68 @@
 export interface ExperienceData {
   role: string;
   company: string;
+  location: string;
   period: string;
   description: string;
-  readMoreLink?: string;
-  tags?: string[]; // optional, in case you want to add skills/stack per experience
+  link?: string;
+  tags?: string[];  
 }
 
 export const ExperienceData = [
   {
     role: "Co-Head of Cyber Security Wing",
     company: "Cyber Blockchain Club",
+    location: "Pune",
     period: "August 2024 - Present",
     description:
       "Worked on AI-driven malware detection, NLP-based threat analysis, and regulatory AI system compliance.",
-    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Blockchain-Club",
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Blockchain-Club",
   },
   {
     role: "Cyber Intern",
     company: "Deepcytes Cyber Lab",
+    location: "Pune",
     period: "March 2025 - Present",
     description:
       "Conducting research on AI-driven threats, dark web intelligence, and counter-surveillance; supporting legal and policy cases with insights on cyber risks, compliance gaps, and digital forensics.",
-    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Deepcytes-Cyber-Lab",
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Deepcytes-Cyber-Lab",
   },
   {
     role: "Cyber Intern",
     company: "Rosche System",
+    location: "Pune",
     period: "Feb 2025 - Present",
     description:
       "Research on vulnerabilities. Pentesting.",
-    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Rosche-System",
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Rosche-System",
   },
   {
     role: "Intern",
-    company: "Cyber Crime Department, Indore",
+    company: "Cyber Crime Department",
+    location: "Indore",
     period: "16 Dec - 24 Dec 2024",
     description:
       "Observed investigations into phishing, QR scams, and WhatsApp hacks. Gained hands-on exposure to digital forensics and social media tracking. Analyzed 10+ cases to inform local cybercrime prevention efforts.",
-    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Crime-Department,-Indore",
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Crime-Department,-Indore",
   },
   {
     role: "Cisco Virtual Internship",
     company: "Cisco",
+    location: "Pune",
     period: "May - July 2024",
     description:
       "Completed hands-on training in networking and cybersecurity fundamentals. Designed secure network topologies and practiced device configurations and troubleshooting using Cisco Packet Tracer",
-    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cisco-Virtual-Internship",
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cisco-Virtual-Internship",
   },
   {
     role: "Cyber Security Intern",
     company: "Cyber Secured India",
+    location: "Pune",
     period: "April 2025",
     description:
       "Gained practical experience in core cybersecurity concepts, including system/network security, offensive and defensive techniques, and Linux fundamentals. Applied skills through hands-on labs and real-world simulation exercises.",
     // tags: [];
-    readMoreLink: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Secured-India",
+    link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Secured-India",
   },
 ];
 
