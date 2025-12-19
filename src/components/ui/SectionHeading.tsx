@@ -1,4 +1,3 @@
-// components/UI/SectionHeading.tsx
 'use client';
 
 interface SectionHeadingProps {
@@ -37,7 +36,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
       </div>
       {description && (
         <p className="mt-3 text-white/60 text-sm pl-4 font-mono">
-          // {description}
+          {'// '}{description}
         </p>
       )}
     </div>
