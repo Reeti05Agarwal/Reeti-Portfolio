@@ -12,7 +12,7 @@ export default function BlogCard() {
       {BlogsData.map((blog, idx) => (
         <motion.article
           key={idx}
-          className="flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-3 shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-green-400/10 hover:border-green-400/30 "
+          className="group flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-3 shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-green-400/10 hover:border-green-400/30 "
         >
           {/* Image Container */}
           <div className="mb-4 w-full h-48 relative overflow-hidden rounded-lg">
@@ -25,7 +25,7 @@ export default function BlogCard() {
             />
           </div>
           {/* Title */}
-          <h2 className="text-xl font-semibold text-white leading-snug">
+          <h2 className="text-xl font-semibold text-white leading-snug group-hover:text-green-400">
             {blog.title}
           </h2>
           {/* Date */}

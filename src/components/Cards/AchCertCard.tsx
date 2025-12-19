@@ -83,17 +83,4 @@ export default function AchCertCard() {
   );
 }
 
-
-          {/* <p className="mt-3 text-white/80 text-md">{card.description}</p> */}
-          
-          {/* Badges */}
-          {/* <div className="mt-2 flex flex-wrap gap-2">
-            {card.tags.map((tag, tagIdx) => (
-              <span
-                key={tagIdx}
-                className="text-lg bg-blue-300/20 text-blue-300 px-2 py-0.5 rounded-md"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>  */}
+ 

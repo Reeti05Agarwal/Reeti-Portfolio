@@ -21,18 +21,20 @@ export default function ResearchCard() {
           <p className="flex mt-1 text-white/70 text-sm">
             <CalenderIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-cyan-300 flex-shrink-0" />
             {card.date}
-          </p>  
+          </p> 
+
           {/* Badges */}
           <div className="mt-2 flex flex-wrap gap-2">
-            {card.tags.map((tag, tagIdx) => (
+              {card.tags.map((tag, tagIdx) => (
               <span
-                key={tagIdx}
-                className="text-sm bg-blue-300/20 text-blue-300 px-2 py-0.5 rounded-md"
+                  key={tagIdx}
+                  className="text-sm bg-gray-300/20 text-gray-300 px-2 py-0.5 rounded-md"
               >
-                {tag}
+                  {tag}
               </span>
-            ))}
-          </div> 
+              ))}
+          </div>
+
           {/* Links */}
           <div className="mt-3 pt-3 border-t border-white/10"> 
             <a 

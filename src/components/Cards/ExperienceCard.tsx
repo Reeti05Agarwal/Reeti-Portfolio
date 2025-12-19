@@ -15,33 +15,68 @@ export default function ExperienceCard() {
                 <motion.div
                     key={idx}
                     custom={idx}
-                    className="group flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-3 shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-green-400/10 hover:border-green-400/30 "
+                    className="group flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-4 shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-green-400/10 hover:border-green-400/30 "
                 >
                     {/* TIMELINE DOT */}
-                    <div className="absolute -left-3 top-6 w-4 h-4 rounded-full bg-primary border-pink-300 border-3 shadow" />
-                        {/* CONTENT */}
-                        <div className="flex justify-between items-center">
-                            <h2 className="text-xl font-bold text-white leading-tight group-hover:text-green-400">
+                    <div className="absolute -left-4 sm:-left-5 top-6">
+                        <div className="relative">
+                            {/* Outer glow */}
+                            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-full blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                            {/* Dot */}
+                            <div className="relative w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 border-2 border-white/80 shadow-lg"></div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col gap-4"> 
+                        {/* CONTENT */} 
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                            <div className="flex-1">
+                            <h2 className="text-lg sm:text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-300 leading-tight">
                                 {exp.role}
                             </h2>
-                            <p className="flex text-base text-white/80 bold pt-0.5 px-1 italic mt-1">
-                                <CalenderIcon className="w-5 h-5 sm:w-5 sm:h-5 mr-2 text-cyan-300 flex-shrink-0" />
-                                {exp.period}
+                            </div>
+                            
+                            <div className="flex items-center text-white/70 text-sm sm:text-base">
+                            <CalenderIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-cyan-300 flex-shrink-0" />
+                            <span className="font-medium">{exp.period}</span>
+                            </div>
+                        </div>
+                        
+                        {/* Company & Location Section */}
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                            <div className="flex items-center">
+                            <span className="text-base sm:text-md font-semibold text-blue-300 bg-blue-500/10 px-3 py-1 rounded-lg border border-blue-400/30">
+                                {exp.company}
+                            </span>
+                            </div>
+                            
+                            <div className="flex items-center text-white/70 text-sm sm:text-base">
+                            <LocationPinIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-cyan-300 flex-shrink-0" />
+                            <span>{exp.location}</span>
+                            </div>
+                        </div>
+                        
+                        {/* Description */}
+                        <div className="mt-1 flex-grow">
+                            <p className="text-white/70 text-sm sm:text-base leading-relaxed">
+                            {exp.description}
                             </p>
                         </div>
-                        <div className="flex justify-between items-center">
-                             <p className="text-lg text-blue-300 font-medium">{exp.company}</p>
-                             <p className="flex mt-1 text-white/80 text-lg">
-                                <LocationPinIcon className="w-6 h-6 sm:w-5 sm:h-5 mr-2 text-cyan-300 flex-shrink-0" />
-                                {exp.location}
-                            </p> 
+
+                        {/* Badges */}
+                        <div className="mt-1 flex flex-wrap gap-2">
+                            {exp.tags.map((tag, tagIdx) => (
+                            <span
+                                key={tagIdx}
+                                className="text-sm bg-gray-300/20 text-gray-300 px-2 py-0.5 rounded-md"
+                            >
+                                {tag}
+                            </span>
+                            ))}
                         </div>
 
-                        
-                        
-                        
-                        <p className="text-white/70 mt-2 text-md">{exp.description}</p>
-                        <div className="mt-3 pt-3 border-t border-white/10">
+
+                        <div className="mt-1 pt-3 border-t border-white/10">
                             {/* <GithubButton1/> */}
                             <a 
                                 href={exp.link}
@@ -70,6 +105,7 @@ export default function ExperienceCard() {
                                 </svg>
                             </Button>
                             </a> 
+                    </div>
                     </div>
                 </motion.div>
             ))}

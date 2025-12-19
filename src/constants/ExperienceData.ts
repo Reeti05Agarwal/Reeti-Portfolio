@@ -4,8 +4,8 @@ export interface ExperienceData {
   location: string;
   period: string;
   description: string;
-  link?: string;
-  tags?: string[];  
+  link: string;
+  tags: string[];  
 }
 
 export const ExperienceData = [
@@ -14,6 +14,7 @@ export const ExperienceData = [
     company: "Cyber Blockchain Club",
     location: "Pune",
     period: "August 2024 - Present",
+    tags: ["Apache", "ElasticSearch", "React", "Docker", "Kafka"],
     description:
       "Worked on AI-driven malware detection, NLP-based threat analysis, and regulatory AI system compliance.",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Blockchain-Club",
@@ -23,6 +24,7 @@ export const ExperienceData = [
     company: "Deepcytes Cyber Lab",
     location: "Pune",
     period: "March 2025 - Present",
+    tags: ["Apache", "ElasticSearch", "React", "Docker", "Kafka"],
     description:
       "Conducting research on AI-driven threats, dark web intelligence, and counter-surveillance; supporting legal and policy cases with insights on cyber risks, compliance gaps, and digital forensics.",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Deepcytes-Cyber-Lab",
@@ -32,6 +34,7 @@ export const ExperienceData = [
     company: "Rosche System",
     location: "Pune",
     period: "Feb 2025 - Present",
+    tags: ["Apache", "ElasticSearch", "React", "Docker", "Kafka"],
     description:
       "Research on vulnerabilities. Pentesting.",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Rosche-System",
@@ -41,6 +44,7 @@ export const ExperienceData = [
     company: "Cyber Crime Department",
     location: "Indore",
     period: "16 Dec - 24 Dec 2024",
+    tags: ["Apache", "ElasticSearch", "React", "Docker", "Kafka"],
     description:
       "Observed investigations into phishing, QR scams, and WhatsApp hacks. Gained hands-on exposure to digital forensics and social media tracking. Analyzed 10+ cases to inform local cybercrime prevention efforts.",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cyber-Crime-Department,-Indore",
@@ -50,6 +54,7 @@ export const ExperienceData = [
     company: "Cisco",
     location: "Pune",
     period: "May - July 2024",
+    tags: ["Apache", "ElasticSearch", "React", "Docker", "Kafka"],
     description:
       "Completed hands-on training in networking and cybersecurity fundamentals. Designed secure network topologies and practiced device configurations and troubleshooting using Cisco Packet Tracer",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Experience/Cisco-Virtual-Internship",
@@ -59,6 +64,7 @@ export const ExperienceData = [
     company: "Cyber Secured India",
     location: "Pune",
     period: "April 2025",
+    tags: ["Apache", "ElasticSearch", "React", "Docker", "Kafka"],
     description:
       "Gained practical experience in core cybersecurity concepts, including system/network security, offensive and defensive techniques, and Linux fundamentals. Applied skills through hands-on labs and real-world simulation exercises.",
     // tags: [];
