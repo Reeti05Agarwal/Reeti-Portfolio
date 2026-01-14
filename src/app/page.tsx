@@ -142,9 +142,9 @@ export default function Home() {
                  
               </div>
 
-              <div className=" md:basis-3/4 border-2 border-gray-200/20 p-3 rounded-lg backdrop-blur-xl shadow-lg shadow-purple-300/20">
+              {/* <div className=" md:basis-3/4 border-2 border-gray-200/20 p-3 rounded-lg backdrop-blur-xl shadow-lg shadow-purple-300/20"> */}
                 <SkillStackGrid />
-              </div>
+              {/* </div> */}
             </div>
 
             {/* Language Stack */}
@@ -158,9 +158,9 @@ export default function Home() {
                 />  
               </div>
               
-              <div className="border-2 border-gray-200/20 p-3 rounded-lg backdrop-blur-xl shadow-lg shadow-purple-300/20">
+              {/* <div className="border-2 border-gray-200/20 p-3 rounded-lg backdrop-blur-xl shadow-lg shadow-purple-300/20"> */}
                 <TechStackGrid />
-              </div>
+              {/* </div> */}
             </div>
 
             {/* Tool Stack */}
@@ -173,9 +173,9 @@ export default function Home() {
                   glowColor="cyan"
                 />    
               </div>
-              <div className="border-2 border-gray-200/20 p-3 rounded-lg backdrop-blur-xl shadow-lg shadow-purple-300/20">
+              {/* <div className="border-2 border-gray-200/20 p-3 rounded-lg backdrop-blur-xl shadow-lg shadow-purple-300/20"> */}
                 <ToolStackGrid />
-              </div>
+              {/* </div> */}
             </div>
 
           </section>
@@ -204,9 +204,9 @@ export default function Home() {
                     glowColor="cyan"
                   />  
               </div>   
-              <div className="flex flex-col gap-6 md:basis-3/4 border-2 p-4 rounded-lg border-gray-200/20 backdrop-blur-md shadow-lg">
+              {/* <div className="flex flex-col gap-6 md:basis-3/4 border-2 p-4 rounded-lg border-gray-200/20 backdrop-blur-md shadow-lg"> */}
                 <AchCertCard />
-              </div>
+              {/* </div> */}
             </div>
 
             {/* CTF */}
@@ -219,9 +219,9 @@ export default function Home() {
                   glowColor="cyan"
                 />    
               </div>   
-              <div className="flex flex-col gap-6 md:basis-3/4 border-2 p-4 rounded-lg border-gray-200/20 backdrop-blur-md shadow-lg">
+              {/* <div className="flex flex-col gap-6 md:basis-3/4 border-2 p-4 rounded-lg border-gray-200/20 backdrop-blur-md shadow-lg"> */}
                 <AchCtfCard />
-              </div>
+              {/* </div> */}
             </div>
             
             {/* Hackathon Cards*/} 
@@ -234,9 +234,9 @@ export default function Home() {
                   glowColor="cyan"
                 />    
             </div>   
-              <div className="flex flex-col gap-6 md:basis-3/4 border-2 p-4 rounded-lg border-gray-200/20 backdrop-blur-md shadow-lg">
+              {/* <div className="flex flex-col gap-6 md:basis-3/4 border-2 p-4 rounded-lg border-gray-200/20 backdrop-blur-md shadow-lg"> */}
                 <HackCard />
-              </div>
+              {/* </div> */}
             </div>
 
 
@@ -250,9 +250,9 @@ export default function Home() {
                   glowColor="cyan"
                 />    
             </div>   
-              <div className="flex flex-col gap-6 md:basis-3/4 border-2 p-4 rounded-lg border-gray-200/20 backdrop-blur-md shadow-lg">
+              {/* <div className="flex flex-col gap-6 md:basis-3/4 border-2 p-4 rounded-lg border-gray-200/20 backdrop-blur-md shadow-lg"> */}
                 <ResearchCard />
-              </div>
+              {/* </div> */}
             </div>
 
           </section>

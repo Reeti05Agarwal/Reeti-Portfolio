@@ -26,7 +26,7 @@ export default function AchCertCard() {
           className="group flex flex-col justify-between bg-black/50 border border-white/10 backdrop-blur-xl rounded-2xl p-3 shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-green-400/10 hover:border-green-400/30 "
   
         >
-          {/* Image Container */}
+          {/* Image Container
           <div className="mb-4 w-full h-48 relative overflow-hidden rounded-lg">
             <Image
               src={card.image}
@@ -35,7 +35,7 @@ export default function AchCertCard() {
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-          </div>
+          </div> */}
           {/* Title */}
           <h2 className="text-xl font-bold text-white group-hover:text-green-400">
             {card.title}
