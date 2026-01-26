@@ -24,7 +24,7 @@ export const hackData: HackData[] = [
     organised: "MP Police",
     date: "01-09-2025",
     tags: ["Kibana", "ElasticSearch", "postgres", ],
-    description: "IPDR Analysis Tool",
+    description: "TraceProbe",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Hackathon/CyberShield", 
   },  
 ];

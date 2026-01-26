@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ExperienceData, cardVariants } from "@/constants/ExperienceData"; 
 import { Button } from "@/components/ui/button"; 
 import CalenderIcon from "@/components/Icons/calender"
+import ReadMoreButton from "@/components/Buttons/ReadMoreButton"
 import LocationPinIcon from "@/components/Icons/location"
 
 export default function ExperienceCard() {
@@ -82,28 +83,9 @@ export default function ExperienceCard() {
                                 href={exp.link}
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="inline-block"
+                                className="inline-block w-full"
                                 >
-                                <Button 
-                                variant="outline" 
-                                className="w-full flex items-center justify-center gap-2 text-green-400 border-green-400/30 bg-black/20 hover:bg-green-400/10 hover:border-green-400/50 hover:text-green-300 transition-all duration-300"
-                            >
-                                <span>Read More</span>
-                                <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                className="h-4 w-4" 
-                                fill="none" 
-                                viewBox="0 0 24 24" 
-                                stroke="currentColor"
-                                >
-                                <path 
-                                    strokeLinecap="round" 
-                                    strokeLinejoin="round" 
-                                    strokeWidth={2} 
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                                />
-                                </svg>
-                            </Button>
+                             <ReadMoreButton/>
                             </a> 
                     </div>
                     </div>

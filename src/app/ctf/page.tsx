@@ -13,13 +13,25 @@ export default function CtfPage() {
         <div className="mb-8 group">
           <SectionHeading 
               directory="reeti@root:~$"
-              command="ls CTF_Competitions"
+              command="ls CTF_Events"
               description="Explore my technical arsenal"
               glowColor="cyan"
           />  
         </div>  
       </motion.div>
-      <CtfCard/>
+      <div className="mb-8 group">
+        <CtfCard/>
+      </div> 
+      
+
+      <div className="mb-8 group">
+        <SectionHeading 
+            directory="reeti@root:~$"
+            command="ls CTF_Writeups"
+            description="Explore my technical arsenal"
+            glowColor="cyan"
+        />  
+      </div>  
 
           
     </main>

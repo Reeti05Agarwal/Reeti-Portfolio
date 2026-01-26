@@ -6,19 +6,21 @@ export interface CertData {
   tags: string[];
   description: string; 
   link?: string; 
+  verification?: string;
   homePage: boolean;
 }
 
 export const certData: CertData[] = [
   {
-    title: "Google cybersecurity Course",
-    organised: "Google",
-    date: "2023-08-15",
+    title: "Junior Penetration Tester (eJPT)",
+    organised: "INE",
+    date: "Dec 2025",
     image: "./images/ipdr.png",
-    tags: ["Cyber Security", "Security Auditing", "Linux", "Security Operations"],
+    tags: ["VAPT", "Security Auditing", "Linux", "Security Operations"],
     description:
       "Developed a Rule-based Network Intrusion Detection (NID) system incorporating real-time packet inspection, slashing network breaches by 15% and flagging 200+ suspicious packetsdaily.",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Google-Cybersecurity-Professional", 
+    verification: 'https://example.com/verify/google-cert',
     homePage: true,
   },
   {
@@ -30,6 +32,7 @@ export const certData: CertData[] = [
     description:
       "Developed a Rule-based Network Intrusion Detection (NID) system incorporating real-time packet inspection, slashing network breaches by 15% and flagging 200+ suspicious packetsdaily.",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Google-Cybersecurity-Professional", 
+    verification: '',
     homePage: true,
   },
   {
@@ -41,6 +44,7 @@ export const certData: CertData[] = [
     description:
       "Introduction to Cybersecurity \n Cybersecurity Essentials \n Introduction to Packet Tracer \n Network Essentials",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Cisco-Certificates", 
+    verification: '',
     homePage: true,
   }, 
   {
@@ -52,6 +56,7 @@ export const certData: CertData[] = [
     description:
       "Designed a secure, AI-based system for real-time fraud detection and behavior analysis. Utilized knowledge distillation, time-series RNNs, and explainability tools (LIME) to ensure efficient and transparent decision-making.",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Cyber-Security-and-Ethical-Hacking", 
+    verification: '',
     homePage: false,
   },
   {
@@ -63,6 +68,7 @@ export const certData: CertData[] = [
     description:
       " ",
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Bash-Shell-Scripting", 
+    verification: '',
     homePage: false,
   }, 
   

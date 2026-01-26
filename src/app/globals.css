@@ -386,121 +386,7 @@ a {
     transform: scale(0.9);
   }
 }
-
-/* Github Button 1 */
-/* From Uiverse.io by arthur_6104 — Customized as GitHubButton1 */
-.githubButton1 {
-  display: flex;
-  border: 3px #fff solid;
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  border-radius: 8px;
-}
-
-.githubButton1-icon {
-  background-color: #fff;
-  padding: 10px 10px 5px 10px;
-  z-index: 2;
-}
-
-.githubButton1-icon svg {
-  width: 25px;
-  height: 25px;
-}
-
-.githubButton1-cube {
-  transition: all 0.4s;
-  transform-style: preserve-3d;
-  width: 200px;
-  height: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.githubButton1:hover .githubButton1-cube {
-  transform: rotateX(90deg);
-}
-
-.githubButton1-side {
-  position: absolute;
-  height: 47px;
-  width: 200px;
-  display: flex;
-  font-size: 0.8em;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: bold;
-}
-
-.githubButton1-top {
-  background: #222229;
-  color: #fff;
-  transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
-}
-
-.githubButton1-front {
-  background: #222229;
-  color: #fff;
-  transform: translate3d(0, 0, 1em);
-}
-
-
-/* Github Button 2 */
-.github-button2 {
-  background: transparent;
-  position: relative;
-  padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: 1px solid #fff;
-  border-radius: 25px;
-  outline: none;
-  overflow: hidden;
-  color: #fff;
-  transition: color 0.3s 0.1s ease-out;
-  text-align: center;
-}
-
-.github-button2 span {
-  margin: 10px;
-}
-
-.github-button2::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  content: "";
-  border-radius: 50%;
-  display: block;
-  width: 20em;
-  height: 20em;
-  left: -5em;
-  text-align: center;
-  transition: box-shadow 0.5s ease-out;
-  z-index: -1;
-}
-
-.github-button2:hover {
-  color: #00f2ea;
-  border: 1px solid #00f2ea;
-}
-
-.github-button2:hover::before {
-  box-shadow: inset 0 0 0 10em #24292e;
-}
-
+ 
 
 
 /* Github Card */ 
@@ -665,203 +551,56 @@ a {
   outline: none;
 }
 
-/* More Details Button */
-.more-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 16px 36px;
-  border: 4px solid transparent;
-  backdrop-filter: blur(30px);
-  font-size: 16px;
-  background-color: inherit;
-  border-radius: 100px;
-  font-weight: 600;
-  color: #a78bfa;
-  box-shadow: 0 0 0 2px #a78bfa;
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  will-change: transform, opacity;
-}
-
-.more-button svg {
-  position: absolute;
-  width: 24px;
-  fill: #a78bfa;
-  z-index: 9;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  will-change: transform, opacity;
-}
-
-.more-button .arr-1 {
-  right: 16px;
-}
-
-.more-button .arr-2 {
-  left: -25%;
-}
-
-.more-button .circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: #a78bfa;
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  will-change: transform, opacity;
-}
-
-.more-button .text {
-  position: relative;
-  z-index: 1;
-  transform: translateX(-12px);
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  will-change: transform, opacity;
-  align-content: center;
-  color: #f9a8d4;
-  text-shadow: 
-    0 0 4px #f9a8d4, 
-    0 0 8px #f472b6, 
-    0 0 12px #ec4899;
-}
-
-.more-button:hover {
-  box-shadow: 0 0 0 12px transparent;
-  color: #212121;
-}
-
-.more-button:hover .arr-1 {
-  right: -25%;
-}
-
-.more-button:hover .arr-2 {
-  left: 16px;
-}
-
-.more-button:hover .text {
-  transform: translateX(12px); 
-  text-shadow: none;
-  color: #212121;
-}
-
-.more-button:hover svg {
-  fill: #212121;
-}
-
-.more-button:active {
-  transform: scale(0.95);
-  box-shadow: 0 0 0 4px #a78bfa;
-}
-
-.more-button:hover .circle {
-  width: 220px;
-  height: 220px;
-  opacity: 1;
-}
+ 
 
 
 
 /* Social Media */
 /* From Uiverse.io by WAIOKYERE */ 
- 
-.example-2 {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  background-color: #00000080;
-  backdrop-filter: blur(80px);
-  border-radius: 20px;
-  border-color: #00f2ea;
-  padding: 20px;
-  box-shadow: 0 4px 20px #0000001a;
-  justify-content: center;
-  align-items: center;
-}
-.example-2 .icon-content {
-  margin: 0 10px;
+ /* Social Media Buttons */
+.icon-content {
   position: relative;
 }
-.example-2 .icon-content .tooltip {
+
+.icon-content .tooltip {
   position: absolute;
-  top: -30px;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  padding: 6px 10px;
-  border-radius: 15px; 
+  padding: 4px 8px;
+  border-radius: 6px;
   opacity: 0;
   visibility: hidden;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: monospace;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.example-2 .icon-content:hover .tooltip {
+
+.icon-content:hover .tooltip {
   opacity: 1;
   visibility: visible;
-  top: -50px;
 }
-.example-2 .icon-content a {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 20%;
-  color: #4d4d4d;
-  background-color: #ffff;
-  transition: all 0.3s ease-in-out;
+
+/* Tooltip colors based on platform */
+.icon-content a[data-social="github"] ~ .tooltip {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(34, 211, 238, 0.3);
 }
-.example-2 .icon-content a:hover {
-  box-shadow: 3px 2px 45px 0px #00000080;
+
+.icon-content a[data-social="linkedin"] ~ .tooltip {
+  background: rgba(37, 99, 235, 0.9);
+  border-color: rgba(59, 130, 246, 0.3);
 }
-.example-2 .icon-content a svg {
-  position: relative;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-}
-.example-2 .icon-content a:hover {
-  color: white;
-}
-.example-2 .icon-content a .filled {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #000;
-  transition: all 0.3s ease-in-out;
-}
-.example-2 .icon-content a:hover .filled {
-  height: 100%;
-}
-/* .example-2 .icon-content a[data-social="spotify"] .filled,
-.example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
-  background-color: #1db954;
-} */
-.example-2 .icon-content a[data-social="medium"] .filled,
-.example-2 .icon-content a[data-social="medium"] ~ .tooltip {
-  background-color: #f26ef4;
-}
-.example-2 .icon-content a[data-social="linkedin"] .filled,
-.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-  background-color: #0088cc;
-}
-.example-2 .icon-content a[data-social="github"] .filled,
-.example-2 .icon-content a[data-social="github"] ~ .tooltip {
-  background-color: #000;
-} 
-.example-2 .icon-content a[data-social="blogs"] .filled,
-.example-2 .icon-content a[data-social="blogs"] ~ .tooltip {
-  background-color: #cf91ff;
+
+.icon-content a[data-social="medium"] ~ .tooltip {
+  background: rgba(168, 85, 247, 0.9);
+  border-color: rgba(192, 132, 252, 0.3);
 }
 
 
@@ -1005,4 +744,42 @@ a {
   .grid-responsive {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+}
+
+.cyber-grid {
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Cyberpunk Aesthetic Utilities */
+.cyber-glow {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  filter: drop-shadow(0 0 15px currentColor);
+}
+
+.cyber-border {
+  border: 1px solid;
+  border-image: linear-gradient(135deg, rgba(0, 255, 255, 0.5), rgba(255, 20, 147, 0.5)) 1;
+}
+
+.cyber-card {
+  background: rgba(20, 20, 40, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.1),
+    inset 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.2),
+    inset 0 0 30px rgba(0, 255, 255, 0.08);
 }
