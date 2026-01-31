@@ -1,5 +1,3 @@
-'use client';
-
 import { motion } from "framer-motion";
 import { projectData } from "@/constants/ProjectData"; 
 import GithubButton1 from "../Github/GithubButton1";

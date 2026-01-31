@@ -1,4 +1,3 @@
-'use client';
 export default function ProjectCard() {
     return (    
         <form className="bg-black/60 border border-neutral-700 backdrop-blur-lg p-8 rounded-2xl shadow-xl space-y-6 transition-all duration-300 hover:shadow-2xl">

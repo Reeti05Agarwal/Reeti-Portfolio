@@ -1,9 +1,5 @@
-'use client';
-
 import { motion } from "framer-motion";
-import { ExperienceData, cardVariants } from "@/constants/ExperienceData"; 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ExperienceData, cardVariants } from "@/constants/ExperienceData";  
 import GithubButton1 from "../Github/GithubButton1";
 
 export default function RecentExperience() {

@@ -1,10 +1,7 @@
-'use client';
-
 import { motion } from "framer-motion";  
 import { ctfData } from "@/constants/CtfData";  
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton"
-import CalenderIcon from "@/components/Icons/calender"
-import LocationPinIcon from "@/components/Icons/location"
+import CalenderIcon from "@/components/Icons/calender" 
 import { Trophy, Users, Target } from "lucide-react";
 
 export default function CtfCard() {

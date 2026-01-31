@@ -1,7 +1,5 @@
-'use client';
 import { motion } from "framer-motion";
-import { ExperienceData, cardVariants } from "@/constants/ExperienceData"; 
-import { Button } from "@/components/ui/button"; 
+import { ExperienceData } from "@/constants/ExperienceData";  
 import CalenderIcon from "@/components/Icons/calender"
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton"
 import LocationPinIcon from "@/components/Icons/location"

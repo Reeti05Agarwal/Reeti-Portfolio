@@ -43,7 +43,7 @@ export default function HeroProfilePicture() {
           
           {/* Actual Image */}
           <Image 
-            src="/REETI_PROFILE_PIC.jpg" 
+            src="/public/REETI_PROFILE_PIC.jpg" 
             alt="Reeti Agarwal"
             fill
             className="object-cover"

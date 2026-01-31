@@ -1,8 +1,5 @@
-'use client';
 import { motion } from "framer-motion";
-import { BlogsData } from "@/constants/BlogsData"; 
-import MediumIcon from "../Icons/SocialMediaIcons/medium";
-import { Button } from "@/components/ui/button"; 
+import { BlogsData } from "@/constants/BlogsData";  
 import CalenderIcon from "@/components/Icons/calender" 
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton"
 import Image from "next/image";  

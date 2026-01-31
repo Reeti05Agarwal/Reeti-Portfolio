@@ -1,7 +1,5 @@
-'use client';
-
 import { motion } from "framer-motion";  
-import { hackData, HackData } from "@/constants/HackData";   
+import { hackData } from "@/constants/HackData";   
 import CalenderIcon from "@/components/Icons/calender"
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton"
 import { getColorScheme } from "@/constants/ColorScheme";

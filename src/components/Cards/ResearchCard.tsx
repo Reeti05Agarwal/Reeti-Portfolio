@@ -1,8 +1,5 @@
-'use client';
-
 import { motion } from "framer-motion";  
-import { researchData, ResearchData } from "@/constants/ResearchData"; 
-import { Button } from "@/components/ui/button"; 
+import { researchData } from "@/constants/ResearchData";  
 import CalenderIcon from "@/components/Icons/calender"
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton"
 
