@@ -8,6 +8,7 @@ export interface CertData {
   link?: string; 
   verification?: string;
   homePage: boolean;
+  isProfessional?: boolean; 
 }
 
 export const certData: CertData[] = [
@@ -22,6 +23,7 @@ export const certData: CertData[] = [
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Google-Cybersecurity-Professional", 
     verification: 'https://example.com/verify/google-cert',
     homePage: true,
+    isProfessional: true,
   },
   {
     title: "Google cybersecurity Course",
@@ -34,6 +36,7 @@ export const certData: CertData[] = [
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Google-Cybersecurity-Professional", 
     verification: '',
     homePage: true,
+    isProfessional: false,
   },
   {
     title: "Cisco Certificates",
@@ -46,6 +49,7 @@ export const certData: CertData[] = [
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Cisco-Certificates", 
     verification: '',
     homePage: true,
+    isProfessional: false,
   }, 
   {
     title: "Cyber Security and Ethical Hacking",
@@ -58,6 +62,7 @@ export const certData: CertData[] = [
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Cyber-Security-and-Ethical-Hacking", 
     verification: '',
     homePage: false,
+    isProfessional: false,
   },
   {
     title: "Bash Shell Scripting",
@@ -70,6 +75,7 @@ export const certData: CertData[] = [
     link: "https://reeti05agarwal.github.io/Tech_Blogs/Certificates/Bash-Shell-Scripting", 
     verification: '',
     homePage: false,
+    isProfessional: false,
   }, 
   
 ];

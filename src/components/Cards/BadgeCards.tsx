@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"; 
 import React from 'react';
+import Image from 'next/image';
  
 const badges = [
   {
@@ -30,7 +31,7 @@ const BadgesSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 * index }}
         >
-        <img
+        <Image
           src={badge.image}
           alt={badge.name}
           className="w-24 h-24 mx-auto mb-4 object-contain"

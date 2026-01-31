@@ -5,7 +5,10 @@ import { certData, CertData } from "@/constants/CertData";
 import CalenderIcon from "@/components/Icons/calender";
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton";
 import CertVerificationButton from '@/components/Buttons/CertVerificationButton';
-import Image from "next/image"; 
+import { getColorScheme } from "@/constants/ColorScheme";
+import { getProjectIcon } from "@/constants/IconUtils";
+import { Icons } from "@/constants/IconUtils";
+import { Star, Award } from "lucide-react";
 
 export default function AchCertCard() {
   const homePageData = certData.filter(card => card.homePage === true);
@@ -25,6 +28,8 @@ export default function AchCertCard() {
       {homePageData.map((card: CertData, idx: number) => {
         const hasVerification = card.verification && card.verification.trim() !== '';
         const hasLink = card.link && card.link.trim() !== '';
+        const colors = getColorScheme(idx);
+        const hasDescription = card.description && card.description.trim() !== '';
         
         return (
           <motion.article
@@ -34,76 +39,98 @@ export default function AchCertCard() {
             transition={{ delay: idx * 0.1 }}
             className="group relative flex flex-col bg-gray-900/80 border border-cyan-500/20 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:border-cyan-400/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
           >
-            {/* Background Glow Effect */}
-            {/* <div className="absolute -inset-1 bg-gradient-to-br from-cyan-500/5 via-transparent to-magenta-500/5 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div> */}
-            
-            {/* Corner Decorations */}
+            {/* Corner decorations */}
             <div className="absolute top-2 left-2 w-3 h-3 border-l border-t border-cyan-400/50 rounded-tl"></div>
             <div className="absolute top-2 right-2 w-3 h-3 border-r border-t border-magenta-400/50 rounded-tr"></div>
             <div className="absolute bottom-2 left-2 w-3 h-3 border-l border-b border-cyan-400/50 rounded-bl"></div>
             <div className="absolute bottom-2 right-2 w-3 h-3 border-r border-b border-magenta-400/50 rounded-br"></div>
             
-            {/* Header with Icon */}
+            {/* Header with dynamic icon */}
             <div className="mb-4 flex items-start justify-between">
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1"> 
-                  <span className="text-xs text-cyan-400/70 font-mono tracking-wider">CERT_ID: {String(idx + 1).padStart(3, '0')}</span>
+              <div className="flex items-center gap-3">
+                <div className={`p-2 rounded-lg ${colors.accent} backdrop-blur-sm`}>
+                  {getProjectIcon(card.title)}
                 </div>
                 
-                {/* Title with glitch effect */}
-                <h2 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 font-mono tracking-tight leading-tight">
-                  {card.title}
-                  <span className="absolute -top-0.5 -left-0.5 text-cyan-400/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div>
+                  <span className="text-xs text-white/60 font-mono">CERT_{String(idx + 1).padStart(3, '0')}</span>
+                  <h2 className="text-lg font-bold text-white transition-colors duration-300 font-mono">
                     {card.title}
-                  </span>
-                </h2>
-                
-                {/* Issuer with icon */}
-                {card.organised && (
-                  <div className="flex items-center gap-1 mt-1">
-                    <span className="text-xs text-green-300/90 font-mono">ISSUER:</span>
-                    <span className="text-xs text-white/80">{card.organised}</span>
-                  </div>
-                )}
+                  </h2>
+                </div>
               </div>
+
               
+              
+              {/* Status Indicator */}
+              <div className="flex flex-col items-end">
+                <div className="flex items-center gap-1 mb-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-xs text-green-400 font-mono">VERIFIED</span>
+                </div>
+                <span className="text-[10px] text-green-400/70 font-mono">SHA-256✓</span>
+              </div>
             </div>
+
+            {card.isProfessional && (
+              <div className="mb-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-yellow-500/20 to-yellow-500/10 border border-yellow-500/30 rounded-full backdrop-blur-sm">
+                  <Star className="w-3 h-3 text-yellow-400" />
+                  <span className="text-xs text-yellow-300 font-mono">Professional Certification</span>
+                  <Award className="w-3 h-3 text-yellow-400" />
+                </div>
+              </div>
+            )}
             
-            {/* Tags with cyberpunk style */}
+            
+            
+            {/* Tags with dynamic colors */}
             <div className="mb-4 flex flex-wrap gap-1.5">
               {card.tags.map((tag, tagIdx) => (
                 <span
                   key={tagIdx}
-                  className="px-2 py-0.5 text-xs bg-purple-900/30 text-purple-300/80 border border-purple-500/20 rounded-md font-mono hover:bg-purple-800/40 hover:border-purple-400/30 transition-all duration-200 cursor-default"
+                  className={`px-2 py-0.5 text-xs border rounded-md font-mono hover:border-${colors.icon.replace('text-', '')}/50 transition-all duration-200 cursor-default ${colors.accent}`}
                 >
                   #{tag}
                 </span>
               ))}
             </div>
+
+            {/* Issuer with icon */}
+            {card.organised && card.organised.trim() !== '' && (
+              <div className="mb-4 flex items-center justify-between gap-2">
+                {/* Issuer - Left side */}
+                <div className="flex items-center gap-2 flex-1">
+                  <div className={`p-1.5 rounded ${colors.accent} flex-shrink-0`}>
+                    <Icons.Award className={`w-4 h-4 ${colors.icon}`} />
+                  </div>
+                  <div className="min-w-0">
+                    <span className="text-xs text-white/60 font-mono block">ISSUER</span>
+                    <p className="text-sm text-white/90 truncate">{card.organised}</p>
+                  </div>
+                </div>
+                
+                {/* Date - Right side */}
+                {card.date && card.date.trim() !== '' && (
+                  <div className="flex items-center gap-2 ml-4 flex-shrink-0">
+                    <div className={`p-1.5 rounded ${colors.accent} flex-shrink-0`}>
+                      <CalenderIcon className={`w-4 h-4 ${colors.icon}`} />
+                    </div>
+                    <div className="text-right">
+                      <span className="text-xs text-white/60 font-mono block">DATE</span>
+                      <p className="text-sm text-white/90 whitespace-nowrap">{card.date}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
             
             {/* Footer with date */}
             <div className="mt-auto pt-3 border-t border-cyan-500/20">
-              <div className="flex items-center justify-between mb-3">
-                {card.date && card.date.trim() !== '' && (
-                  <div className="flex items-center gap-1.5">
-                    <CalenderIcon className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-300 flex-shrink-0" />
-                    <span className="text-xs text-white/70 font-mono tracking-tight">
-                      {card.date}
-                    </span>
-                  </div>
-                )}
-                
-                {/* Data integrity check */}
-                <div className="flex items-center gap-1">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div> 
-                  <span className="text-[12px] text-green-400/70 font-mono">Verified: SHA-256✓</span>
-                </div>
-              </div>
-              
-              {/* Links - Dynamic width handling (like project card) */}
+              {/* Links - Dynamic width handling */}
               <div className={`flex gap-2 ${!hasVerification || !hasLink ? 'flex-col' : ''}`}>
                 
-                {/* Read More Button - only if link exists */}
+                {/* View Certificate Button */}
                 {hasLink && (
                   <a 
                     href={card.link}
@@ -113,14 +140,14 @@ export default function AchCertCard() {
                   >
                     <ReadMoreButton 
                       fullWidth={!hasVerification}
-                      className="h-11"
+                      className={`h-11 ${colors.primary} ${colors.glow}`}
                     >
                       $ View Certificate
                     </ReadMoreButton>
                   </a>
                 )}
                 
-                {/* Verification Button - only if verification link exists */}
+                {/* Verification Button */}
                 {hasVerification && (
                   <a 
                     href={card.verification}
@@ -130,32 +157,17 @@ export default function AchCertCard() {
                   >
                     <CertVerificationButton 
                       fullWidth={!hasLink}
-                      className="h-11"
+                      className={`h-11 ${colors.primary} ${colors.glow}`}
                     >
                       Verify
                     </CertVerificationButton>
                   </a>
                 )}
-                
-                
               </div>
             </div>
-             
           </motion.article>
         );
       })}
     </div>
   );
 }
-
-// Add this CSS to your global styles or in a style tag
-const cyberpunkStyles = `
-@keyframes scan {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-`;

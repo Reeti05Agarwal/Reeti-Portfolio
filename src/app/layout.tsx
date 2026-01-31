@@ -119,7 +119,7 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col">
           {children}
         </div>
-        <CyberChatbot />
+        {/* <CyberChatbot /> */}
         <Analytics />
       </body>
       <footer className="relative z-10 mt-8 text-center text-md terminal-glow-cyan py-7">
