@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import CyberpunkTerminal from './ChatBotTerminal';
-import { X, MessageSquare, Terminal } from 'lucide-react';
+import { X, Terminal } from 'lucide-react';
 
 export default function CyberChatbot() {
   const [isOpen, setIsOpen] = useState(false);

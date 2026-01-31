@@ -75,7 +75,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const geist = Geist({ subsets: ["latin"] });
-const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
+// const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Reeti | Cybersecurity & Dev Portfolio',

@@ -1,7 +1,7 @@
 import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
 import { 
   Terminal, Shield, Eye, Wifi, Cpu, GitBranch, 
-  Search, Activity, Database, Key, Zap, FileSearch 
+  Search, Activity, Database, Key, FileSearch 
 } from "lucide-react";
 
 const securityTools = [

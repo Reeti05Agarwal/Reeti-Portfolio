@@ -211,8 +211,8 @@ export default function Home() {
                 <h2 className="text-2xl font-bold text-white font-mono tracking-wider cyber-glow">
                   CONNECT WITH ME
                 </h2>
-                <p className="text-cyan-400/70 font-mono text-sm mt-2">
-                  Let's discuss cybersecurity, AI research, or potential collaborations
+               <p className="text-cyan-400/70 font-mono text-sm mt-2">
+                  Let&apos;s discuss cybersecurity, AI research, or potential collaborations
                 </p>
               </div>
 
