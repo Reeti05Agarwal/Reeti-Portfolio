@@ -69,8 +69,7 @@
 
 import React from "react"
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, JetBrains_Mono } from 'next/font/google'
-import CyberChatbot from "@/components/ChatBotTerminal";
+import { Geist, Geist_Mono, JetBrains_Mono } from 'next/font/google' 
 import Navbar from "@/components/Navbar";  
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
