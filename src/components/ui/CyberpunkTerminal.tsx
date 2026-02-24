@@ -11,7 +11,7 @@ export function CyberpunkTerminal() {
   const [lines, setLines] = useState<TerminalLine[]>([
     {
       type: 'output',
-      content: '▓▒░ CYBER SECURITY TERMINAL v3.0 ░▒▓',
+      content: 'CYBER SECURITY TERMINAL',
     },
     {
       type: 'output',
@@ -201,198 +201,55 @@ export function CyberpunkTerminal() {
   }, []);
 
   return (
-    <div className="w-full h-full relative overflow-hidden bg-black">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/5 to-purple-900/5"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/3 via-transparent to-purple-500/3"></div>
-      
-      {/* Scan Lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(0deg,_transparent_50%,_rgba(0,255,255,0.02)_50%)] bg-[length:100%_4px] animate-scan"></div>
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_98%,_rgba(255,0,110,0.03)_1%)]"></div>
-      
-      {/* Matrix Code Rain (Subtle) */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-green-400 font-mono text-xs animate-matrix"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 10}s`,
-            }}
-          >
-            {Math.random().toString(36).substring(2, 4)}
-          </div>
-        ))}
+  <div className="w-full h-full relative bg-[#0b1116] text-green-300 font-mono">
+    
+    {/* Subtle Glow Background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none" />
+
+    {/* Terminal Body */}
+    <div
+      ref={containerRef}
+      className={`relative z-10 h-full overflow-y-auto px-6 py-6 space-y-3 transition-all duration-200 ${
+        isGlitching ? 'translate-x-[1px]' : ''
+      }`}
+    >
+      {lines.map((line, index) => (
+        <div
+          key={index}
+          className={`whitespace-pre-wrap leading-relaxed text-sm ${
+            line.type === 'command'
+              ? 'text-cyan-400'
+              : 'text-green-300/90'
+          }`}
+        >
+          {line.content}
+        </div>
+      ))}
+
+      {/* Input */}
+      <div className="flex items-center gap-2 mt-4">
+        <span className="text-cyan-400">reeti@cybersec:~$</span>
+        <input
+          ref={inputRef}
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
+          className="flex-1 bg-transparent outline-none text-green-300 caret-cyan-400"
+          autoFocus
+          spellCheck={false}
+        />
       </div>
-
-      {/* Terminal Container */}
-      <div
-        ref={containerRef}
-        className={`relative z-10 w-full h-full overflow-y-auto p-6 transition-all duration-200 ${
-          isGlitching ? 'glitch-effect' : ''
-        }`}
-        style={{
-          background: 'rgba(0, 10, 15, 0.85)',
-          backdropFilter: 'blur(2px)',
-        }}
-      >
-        {/* Terminal Header */}
-        <div className="mb-6 border-b border-cyan-500/30 pb-3">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="flex gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-            </div>
-            <span className="text-cyan-300 font-mono text-sm">
-              reeti@cybersec:~$
-            </span>
-            <span className="ml-auto text-xs text-cyan-500/60 font-mono">
-              [SYSTEM ACTIVE]
-            </span>
-          </div>
-          <div className="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
-        </div>
-
-        {/* Terminal Content */}
-        <div className="font-mono text-sm space-y-3">
-          {lines.map((line, index) => (
-            <div
-              key={index}
-              className={`whitespace-pre-wrap break-words leading-relaxed ${
-                line.type === 'command'
-                  ? 'text-cyan-300'
-                  : 'text-green-300/90'
-              }`}
-            >
-              {line.content}
-            </div>
-          ))}
-
-          {/* Input Line */}
-          <div className="flex items-center gap-2 mt-4 group">
-            <div className="flex items-center gap-2">
-              <span className="text-cyan-300">┌─[</span>
-              <span className="text-green-400">reeti@sec</span>
-              <span className="text-cyan-300">]-[</span>
-              <span className="text-purple-300">~</span>
-              <span className="text-cyan-300">]</span>
-            </div>
-            <div className="flex-1 relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <input
-                ref={inputRef}
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                className="w-full bg-transparent outline-none px-2 text-green-300 relative z-10"
-                placeholder="Type command..."
-                autoFocus
-                spellCheck="false"
-              />
-            </div>
-            <div className="flex items-center">
-              <span className="text-cyan-300">└─$</span>
-              <span
-                className={`ml-1 w-[6px] h-4 bg-cyan-400 ${
-                  lines.length > 0 ? 'animate-pulse' : ''
-                }`}
-              ></span>
-            </div>
-          </div>
-        </div>
-
-        {/* Terminal Footer */}
-        <div className="mt-8 pt-4 border-t border-cyan-500/20">
-          <div className="flex flex-wrap gap-4 text-xs text-cyan-400/60">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span>SSH: CONNECTED</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-              <span>AES-256 ENCRYPTED</span>
-            </div>
-            <div className="flex items-center gap-2 ml-auto">
-              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-              <span>HTB: PRO HACKER</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Corner Decorations */}
-      <div className="absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 border-cyan-500/50"></div>
-      <div className="absolute top-0 right-0 w-6 h-6 border-r-2 border-t-2 border-purple-500/50"></div>
-      <div className="absolute bottom-0 left-0 w-6 h-6 border-l-2 border-b-2 border-cyan-500/50"></div>
-      <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-purple-500/50"></div>
-
-      {/* Outer Glow */}
-      <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 rounded-xl blur-xl -z-10"></div>
-
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes scan {
-          0% {
-            background-position: 0 0;
-          }
-          100% {
-            background-position: 0 4px;
-          }
-        }
-        
-        @keyframes matrix {
-          0% {
-            transform: translateY(-100px);
-            opacity: 0;
-          }
-          10% {
-            opacity: 0.8;
-          }
-          90% {
-            opacity: 0.8;
-          }
-          100% {
-            transform: translateY(100vh);
-            opacity: 0;
-          }
-        }
-        
-        .animate-scan {
-          animation: scan 0.5s linear infinite;
-        }
-        
-        .animate-matrix {
-          animation: matrix linear infinite;
-        }
-        
-        .glitch-effect {
-          animation: glitch 0.1s linear;
-        }
-        
-        @keyframes glitch {
-          0% {
-            transform: translateX(0);
-          }
-          25% {
-            transform: translateX(-2px);
-          }
-          50% {
-            transform: translateX(2px);
-          }
-          75% {
-            transform: translateX(-1px);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </div>
-  );
+
+    {/* Bottom Status Bar */}
+    <div className="absolute bottom-0 left-0 right-0 border-t border-cyan-500/10 bg-[#0e151b] px-6 py-2 flex justify-between text-xs text-cyan-400/60">
+      <span>SSH CONNECTED</span>
+      <span>AES-256 ENCRYPTED</span>
+      <span>HTB PROFILE ACTIVE</span>
+    </div>
+  </div>
+);
 }
 
 export default CyberpunkTerminal;

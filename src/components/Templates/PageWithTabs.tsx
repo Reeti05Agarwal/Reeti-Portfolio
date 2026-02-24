@@ -3,13 +3,13 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect, ReactNode } from 'react';
-import { TAB_CONFIG, Colors } from '@/constants/ColorScheme';
+import { TabColor, Colors } from '@/constants/ColorScheme';
 import { useRouter } from 'next/navigation';
 
 interface TabConfig {
   id: string;
   label: string;
-  color: keyof typeof TAB_CONFIG;
+  color: TabColor;
   icon: ReactNode;
   description?: string;
   badge?: string;

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";   
 import CtfCard from "@/components/Cards/CtfCard";
 import { useState, useEffect } from "react";
-import { Terminal, Flag, Trophy, Shield } from "lucide-react";
+import { Terminal, Flag } from "lucide-react";
 
 export default function CtfPage() {
   const [activeTab, setActiveTab] = useState("all");
@@ -105,6 +105,7 @@ export default function CtfPage() {
           className="mb-8 min-h-[400px]"
         >
           <div className="bg-black/30 backdrop-blur-sm min-h-[400px] transition-all duration-300">
+            {/* @ts-ignore */}
             <CtfCard activeCategory={activeTab} />
           </div>
         </motion.div>

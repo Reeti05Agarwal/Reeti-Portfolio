@@ -10,7 +10,7 @@ export default function Navbar() {
     { name: 'Blogs', href: '/blogs', emoji: ''},
     { name: 'CTF & Writeups', href: '/ctf', emoji: ''},
     { name: 'Experience', href: '/experience', emoji: ''},
-    { name: 'Resume', href: '/resume', emoji: ''}, 
+    // { name: 'Resume', href: '/resume', emoji: ''}, 
     { name: 'Terminal', href: '/terminal', emoji: ''},
   ];
 

@@ -12,7 +12,7 @@ export default function HeroLeftContent() {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
           Reeti Agarwal
         </h1>
-        <p className="text-lg sm:text-xl text-gren-400 font-mono">
+        <p className="text-lg sm:text-xl text-cyan-400 font-mono">
           Cybersecurity Professional
         </p>
       </div>

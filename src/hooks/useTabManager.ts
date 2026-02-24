@@ -24,7 +24,7 @@ export function useTabManager({
       setActiveTab(urlTab);
       onTabChange?.(urlTab);
     }
-  }, []);
+  }, [activeTab, onTabChange, paramName, searchParams]);
 
   const handleTabChange = useCallback((tabId: string) => {
     setActiveTab(tabId);

@@ -5,8 +5,7 @@ import { useState, useEffect } from 'react';
 import { Terminal, FileText, BookOpen, PenTool } from 'lucide-react';
 
 // Cast BlogCard to any so we can pass props that aren't yet typed on the component.
-// This avoids the TSX error while leaving a clear place to add proper typing in the BlogCard component later.
-const BlogCardAny = BlogCard as any;
+// This avoids the TSX error while leaving a clear place to add proper typing in the BlogCard component later. 
 
 export default function BlogsPage() {
   const [activeTab, setActiveTab] = useState('all');

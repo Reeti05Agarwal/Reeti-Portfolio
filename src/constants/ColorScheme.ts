@@ -47,15 +47,15 @@ export const COLOR_PALETTE = {
     shadow: 'rgba(236,72,153,0.15)',
     gradient: 'from-pink-500/10 via-transparent to-pink-500/5'
   },
-  amber: {
-    primary: 'bg-amber-500',
-    light: 'bg-amber-400',
-    dark: 'bg-amber-600',
-    text: 'text-amber-300',
-    border: 'border-amber-500',
-    shadow: 'rgba(245,158,11,0.15)',
-    gradient: 'from-amber-500/10 via-transparent to-amber-500/5'
-  }
+  // amber: {
+  //   primary: 'bg-amber-500',
+  //   light: 'bg-amber-400',
+  //   dark: 'bg-amber-600',
+  //   text: 'text-amber-300',
+  //   border: 'border-amber-500',
+  //   shadow: 'rgba(245,158,11,0.15)',
+  //   gradient: 'from-amber-500/10 via-transparent to-amber-500/5'
+  // }
 } as const;
 
 export type ColorName = keyof typeof COLOR_PALETTE;
@@ -200,3 +200,11 @@ export const TAB_CONFIG = createTabConfig({
     description: 'Academic papers, studies, and detailed analysis'
   }
 });
+
+export type TabColor =
+  | "cyan"
+  | "purple"
+  | "green"
+  | "blue"
+  | "pink"
+  | "amber";
