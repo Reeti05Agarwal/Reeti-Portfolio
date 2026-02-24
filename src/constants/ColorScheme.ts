@@ -206,5 +206,4 @@ export type TabColor =
   | "purple"
   | "green"
   | "blue"
-  | "pink"
-  | "amber";
+  | "pink";
