@@ -1,6 +1,57 @@
 'use client';
 import { motion } from "framer-motion";   
-import CtfCard from "@/components/Cards/CtfCard";
+import dynamic from "next/dynamic";
+
+const CtfCard = dynamic(
+  () => import("@/components/Cards/CtfCard"),
+  {
+    loading: () => (
+      <div className="relative h-[400px] overflow-hidden bg-black/40 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 font-mono">
+
+        {/* Glow Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 animate-pulse pointer-events-none" />
+
+        {/* Boot Log Animation */}
+        <div className="relative z-10 space-y-3 text-sm">
+          <p className="text-cyan-400 animate-pulse">
+            reeti@portfolio:~$ initializing_ctf_module
+          </p>
+
+          <p className="text-green-400/80 animate-[fadeIn_0.5s_ease-in-out]">
+            ▸ Fetching events...
+          </p>
+
+          <p className="text-green-400/70 animate-[fadeIn_1s_ease-in-out]">
+            ▸ Decrypting writeups...
+          </p>
+
+          <p className="text-green-400/60 animate-[fadeIn_1.5s_ease-in-out]">
+            ▸ Establishing secure connection...
+          </p>
+
+          {/* Blinking Cursor */}
+          <div className="flex items-center gap-2 mt-4">
+            <span className="text-cyan-400">loading</span>
+            <span className="w-2 h-5 bg-cyan-400 animate-pulse"></span>
+          </div>
+        </div>
+
+        {/* Animated Shimmer Lines */}
+        <div className="absolute bottom-6 left-6 right-6 grid md:grid-cols-2 gap-6 animate-pulse">
+          {[...Array(4)].map((_, i) => (
+            <div
+              key={i}
+              className="h-24 bg-cyan-500/10 border border-cyan-500/20 rounded-lg"
+            />
+          ))}
+        </div>
+      </div>
+    ),
+    ssr: false,
+  }
+);
+
+
 import { useState, useEffect } from "react";
 import { Terminal, Flag } from "lucide-react";
 

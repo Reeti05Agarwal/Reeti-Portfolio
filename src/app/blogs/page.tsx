@@ -1,6 +1,55 @@
 'use client';
 import { motion } from "framer-motion";   
-import BlogCard from "@/components/Cards/BlogCard";
+import dynamic from "next/dynamic";
+
+const BlogCard = dynamic(
+  () => import("@/components/Cards/BlogCard"),
+  {
+    loading: () => (
+      <div className="relative h-[500px] overflow-hidden bg-black/40 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 font-mono">
+
+        {/* Subtle Glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 animate-pulse pointer-events-none" />
+
+        {/* Terminal Boot Log */}
+        <div className="relative z-10 space-y-3 text-sm">
+          <p className="text-cyan-400 animate-pulse">
+            reeti@portfolio:~$ ./load_blogs
+          </p>
+
+          <p className="text-green-400/80 animate-[fadeIn_0.5s_ease-in-out]">
+            ▸ Indexing articles...
+          </p>
+
+          <p className="text-green-400/70 animate-[fadeIn_1s_ease-in-out]">
+            ▸ Parsing markdown files...
+          </p>
+
+          <p className="text-green-400/60 animate-[fadeIn_1.5s_ease-in-out]">
+            ▸ Building category cache...
+          </p>
+
+          <div className="flex items-center gap-2 mt-4">
+            <span className="text-cyan-400">initializing</span>
+            <span className="w-2 h-5 bg-cyan-400 animate-pulse"></span>
+          </div>
+        </div>
+
+        {/* Blog Skeleton Cards */}
+        <div className="absolute bottom-6 left-6 right-6 grid md:grid-cols-2 gap-6 animate-pulse">
+          {[...Array(4)].map((_, i) => (
+            <div
+              key={i}
+              className="h-32 bg-cyan-500/10 border border-cyan-500/20 rounded-lg"
+            />
+          ))}
+        </div>
+      </div>
+    ),
+    ssr: false,
+  }
+);
+
 import { useState, useEffect } from 'react';
 import { Terminal, FileText, BookOpen, PenTool } from 'lucide-react';
 
