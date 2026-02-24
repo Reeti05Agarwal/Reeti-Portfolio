@@ -2,6 +2,11 @@
 import { motion } from "framer-motion";   
 import dynamic from "next/dynamic";
 
+interface CtfCardProps {
+  activeCategory?: string;
+}
+
+
 const CtfCard = dynamic(
   () => import("@/components/Cards/CtfCard"),
   {
@@ -55,7 +60,7 @@ const CtfCard = dynamic(
 import { useState, useEffect } from "react";
 import { Terminal, Flag } from "lucide-react";
 
-export default function CtfPage() {
+export default function CtfPage({ activeCategory = 'all' }: CtfCardProps) {
   const [activeTab, setActiveTab] = useState("all");
 
   const tabs = [
@@ -156,7 +161,7 @@ export default function CtfPage() {
           className="mb-8 min-h-[400px]"
         >
           <div className="bg-black/30 backdrop-blur-sm min-h-[400px] transition-all duration-300">
-            {/* @ts-expect-error */}
+            // @ts-expect-error - dynamic tab color indexing requires keyof assertion
             <CtfCard activeCategory={activeTab} />
           </div>
         </motion.div>
