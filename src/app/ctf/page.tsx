@@ -156,7 +156,7 @@ export default function CtfPage() {
           className="mb-8 min-h-[400px]"
         >
           <div className="bg-black/30 backdrop-blur-sm min-h-[400px] transition-all duration-300">
-            {/* @ts-ignore */}
+            {/* @ts-expect-error */}
             <CtfCard activeCategory={activeTab} />
           </div>
         </motion.div>
