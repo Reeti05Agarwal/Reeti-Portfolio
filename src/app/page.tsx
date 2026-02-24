@@ -21,48 +21,48 @@ export default function Home() {
           }}></div>
         </div>
 
-        {/* Hero Section */}
-        <section className="pt-20 pb-16">
-          <div className="relative bg-gradient-to-br from-black/40 via-gray-900/50 to-black/50 backdrop-blur-lg rounded-2xl p-8 sm:p-10 transition-all duration-500 overflow-hidden border border-white/10 hover:border-cyan-500/30">
-            {/* Subtle grid background */}
-            <div className="absolute inset-0 opacity-5">
-              <div 
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `
-                    linear-gradient(90deg, rgba(255,255,255,0.05) 100px, transparent 1px),
-                    linear-gradient(0deg, rgba(255,255,255,0.05) 100px, transparent 1px)
-                  `,
-                  backgroundSize: '40px 40px'
-                }}
-              />
-            </div>
-            
-            {/* Subtle glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-700"></div>
-          
-            <div className="relative max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <HeroLeftContent />
-                <HeroProfilePicture />
+          {/* Hero Section */}
+          <section className="pt-20 pb-6">
+            <div className="relative bg-gradient-to-br from-black/40 via-gray-900/50 to-black/50 backdrop-blur-lg rounded-2xl p-8 sm:p-10 transition-all duration-500 overflow-hidden border border-white/10 hover:border-cyan-500/30">
+              {/* Subtle grid background */}
+              <div className="absolute inset-0 opacity-5">
+                <div 
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: `
+                      linear-gradient(90deg, rgba(255,255,255,0.05) 100px, transparent 1px),
+                      linear-gradient(0deg, rgba(255,255,255,0.05) 100px, transparent 1px)
+                    `,
+                    backgroundSize: '40px 40px'
+                  }}
+                />
               </div>
-            </div>
+              
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-700"></div>
             
-            {/* Corner accents */}
-            <div className="absolute top-4 left-4 w-3 h-3 border-l border-t border-cyan-500/50 rounded-tl pointer-events-none"></div>
-            <div className="absolute top-4 right-4 w-3 h-3 border-r border-t border-cyan-500/50 rounded-tr pointer-events-none"></div>
-            <div className="absolute bottom-4 left-4 w-3 h-3 border-l border-b border-cyan-500/50 rounded-bl pointer-events-none"></div>
-            <div className="absolute bottom-4 right-4 w-3 h-3 border-r border-b border-cyan-500/50 rounded-br pointer-events-none"></div>
-          </div>
- 
-        </section>
- 
-        {/* Stats Section*/}
-        <section className="my-16">
-          <div className="md:col-span-2 lg:col-span-3">
-            <StatsSection />
-          </div>
-        </section>
+            <div className="relative max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] gap-12 lg:gap-14 items-center">
+    <HeroLeftContent />
+    <HeroProfilePicture />
+  </div>
+</div>
+              
+              {/* Corner accents */}
+              <div className="absolute top-4 left-4 w-3 h-3 border-l border-t border-cyan-500/50 rounded-tl pointer-events-none"></div>
+              <div className="absolute top-4 right-4 w-3 h-3 border-r border-t border-cyan-500/50 rounded-tr pointer-events-none"></div>
+              <div className="absolute bottom-4 left-4 w-3 h-3 border-l border-b border-cyan-500/50 rounded-bl pointer-events-none"></div>
+              <div className="absolute bottom-4 right-4 w-3 h-3 border-r border-b border-cyan-500/50 rounded-br pointer-events-none"></div>
+            </div>
+  
+          </section>
+  
+          {/* Stats Section*/}
+          <section className="my-2">
+            <div className="md:col-span-2 lg:col-span-3">
+              <StatsSection />
+            </div>
+          </section>
 
         {/* Tech Stack Section */}
         <section className="my-16">
@@ -75,7 +75,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section className="my-16">
+        <section className="my-1">
           <ContactSection/>
         </section>
       </main>

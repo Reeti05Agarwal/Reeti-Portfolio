@@ -50,9 +50,9 @@ export default function TechStackSection() {
           <h2 className="text-2xl font-bold text-white font-mono tracking-wider mb-2">
             TECH STACK TERMINAL
           </h2>
-          <p className="text-cyan-400/70 font-mono text-sm">
+          {/* <p className="text-cyan-400/70 font-mono text-sm">
             Select a category to view technical capabilities
-          </p>
+          </p> */}
         </div>
 
         {/* Tabs */}

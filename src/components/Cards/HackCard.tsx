@@ -19,7 +19,7 @@ export default function HackCard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
-            className="group relative flex flex-col bg-gray-900/80 border border-cyan-500/20 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:border-cyan-400/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
+            className="group relative flex flex-col bg-gray-900/80 border border-black-500 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:border-black-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
           >
             {/* Corner decorations */}
             <div className="absolute top-2 left-2 w-3 h-3 border-l border-t border-cyan-400/50 rounded-tl"></div>

@@ -4,6 +4,10 @@ import BlogCard from "@/components/Cards/BlogCard";
 import { useState, useEffect } from 'react';
 import { Terminal, FileText, BookOpen, PenTool } from 'lucide-react';
 
+// Cast BlogCard to any so we can pass props that aren't yet typed on the component.
+// This avoids the TSX error while leaving a clear place to add proper typing in the BlogCard component later.
+const BlogCardAny = BlogCard as any;
+
 export default function BlogsPage() {
   const [activeTab, setActiveTab] = useState('all');
 
@@ -40,9 +44,9 @@ export default function BlogsPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-white font-mono tracking-wider mb-3">
             TECH BLOGS 
           </h1>
-          <p className="text-cyan-400/70 font-mono text-sm md:text-base mx-auto">
+          {/* <p className="text-cyan-400/70 font-mono text-sm md:text-base mx-auto">
             Cybersecurity insights, technical deep-dives, and research publications
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Category Filter Tabs */}
@@ -96,34 +100,21 @@ export default function BlogsPage() {
 
         {/* Active Content Section */}
         <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          layout
+          // key={activeTab}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="mb-8"
+          className="mb-8 min-h-[500px]"
         >
-          {/* Content Header */}
-          <div className="flex items-center gap-3 mb-6 p-4 border border-cyan-500/20 rounded-xl bg-black/30 backdrop-blur-sm">
-            <div className="p-2 rounded-lg bg-cyan-500/20 border border-cyan-500/30">
-              <BookOpen className="w-5 h-5 text-cyan-400" />
-            </div>
-            <div>
-              <h2 className="text-lg font-bold text-cyan-400 font-mono">
-                TECHNICAL PUBLICATIONS
-              </h2>
-              <p className="text-white/70 font-mono text-sm">
-                Research papers, cybersecurity analysis, and technology insights
-              </p>
-            </div>
-            <span className="ml-auto text-xs text-white/50 font-mono px-3 py-1 border border-white/20 rounded-full">
-              BLOGS_DB
-            </span>
-          </div>
-
+     
           {/* Blog Cards */}
-          <div className="bg-black/30 backdrop-blur-sm">
+          {/* <div className="bg-black/30 backdrop-blur-sm">
             <BlogCard activeCategory={activeTab} />
-          </div>
+          </div> */}
+          <div className="bg-black/30 backdrop-blur-sm min-h-[400px] transition-all duration-300">
+  <BlogCard activeCategory={activeTab} />
+</div>
         </motion.div>
 
         

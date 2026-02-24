@@ -212,19 +212,18 @@ export default function StatsSection() {
             <div className="w-2 h-4 bg-cyan-400 animate-blink"></div>
           </div>
           
-          <h2 className="text-4xl font-bold text-white font-mono tracking-wider mb-6 relative">
+          <h2 className="text-4xl font-bold text-white font-mono tracking-wider relative">
             <span className="relative">
-              ░▒▓ SYSTEM STATISTICS ▓▒░
-              <span className="absolute inset-0 text-cyan-400 opacity-30 blur-sm">░░▒▓ SYSTEM STATISTICS ▓▒░░</span>
+              SYSTEM STATISTICS
             </span>
           </h2>
           
-          <div className="max-w-3xl mx-auto">
+          {/* <div className="max-w-3xl mx-auto">
             <p className="text-lg text-cyan-300/80 font-mono mb-2">
               [ QUANTITATIVE ANALYSIS OF ACHIEVEMENTS AND EXPERIENCE METRICS ]
             </p>
             <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50"></div>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col items-center gap-8 mb-10">

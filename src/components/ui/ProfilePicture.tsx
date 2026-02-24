@@ -43,7 +43,7 @@ export default function HeroProfilePicture() {
           
           {/* Actual Image */}
           <Image 
-            src="/images/profile/profile.png" 
+            src="/images/Profile/profile.png" 
             alt="Reeti Agarwal"
             fill
             className="object-cover"
@@ -52,7 +52,7 @@ export default function HeroProfilePicture() {
         </div>
 
         {/* Floating Security Badges */}
-        <div className="absolute -top-2 -right-2 w-16 h-16 bg-black/80 border border-green-400/70 rounded-lg p-2 backdrop-blur-sm rotate-12">
+        {/* <div className="absolute -top-2 -right-2 w-16 h-16 bg-black/80 border border-green-400/70 rounded-lg p-2 backdrop-blur-sm rotate-12">
           <div className="text-center">
             <div className="text-green-400 text-xl">⚡</div>
             <span className="text-[10px] text-green-300 font-mono">eJPT</span>
@@ -64,7 +64,7 @@ export default function HeroProfilePicture() {
             <div className="text-green-400 text-lg">🛡️</div>
             <span className="text-[9px] text-green-300 font-mono">CTF</span>
           </div>
-        </div>
+        </div> */}
 
         {/* Status Indicator */}
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

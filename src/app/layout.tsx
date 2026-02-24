@@ -1,12 +1,15 @@
 // layout.tsx - FIXED VERSION
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Geist } from 'next/font/google' 
+import { JetBrains_Mono } from 'next/font/google'
 import Navbar from "@/components/Navbar";  
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const geist = Geist({ subsets: ["latin"] });
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -44,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${geist.className} antialiased bg-background text-foreground`}>
+      <body className={`${jetbrains.className} antialiased bg-background text-foreground`}>
         <div className="cyber-grid" />
         <Navbar /> 
         <main className="min-h-screen flex flex-col">
@@ -52,7 +55,7 @@ export default function RootLayout({
         </main>
         
         {/* FOOTER MOVED INSIDE BODY */}
-        <footer className="relative z-10 mt-8 text-center text-md terminal-glow-cyan py-7">
+        <footer className="relative z-10 mt-1 text-center text-md terminal-glow-cyan py-7">
           <div className="glass-panel inline-block px-4 py-2 rounded border border-cyan-500/20">
             system: online | user: reeti | status: active
           </div>

@@ -23,9 +23,9 @@ export default function AchievementSection() {
                 <h2 className="text-2xl font-bold text-white font-mono tracking-wider">
                     <span className="text-purple-400">ACHIEVEMENTS</span> & <span className="text-pink-400">CERTIFICATIONS</span>
                 </h2>
-                <p className="text-purple-400/70 font-mono text-sm mt-2">
+                {/* <p className="text-purple-400/70 font-mono text-sm mt-2">
                     CTF Wins, Hackathons, Research & Certifications
-                </p>
+                </p> */}
                 </div>
 
                 {/* Achievement Tabs */}

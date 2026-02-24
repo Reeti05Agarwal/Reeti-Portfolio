@@ -65,7 +65,7 @@ export default function ProjectCard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
-            className="group relative flex flex-col bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-gray-900/80 border border-cyan-500/20 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:border-cyan-400/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
+            className="group relative flex flex-col bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-gray-900/80 border border-black-500 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:border-black-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
           >
             {/* Unique background gradient overlay */}
             <div className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}></div>
@@ -76,18 +76,14 @@ export default function ProjectCard() {
             <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-cyan-400/30 rounded-bl"></div>
             <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-magenta-400/30 rounded-br"></div>
             
-            {/* Project ID Badge */}
-            <div className="absolute -top-5 -right-2 bg-black/80 border border-cyan-500/30 rounded-lg px-2 py-1 backdrop-blur-sm rotate-3">
-              <span className="text-xs text-cyan-300 font-mono">PROJ_{String(idx + 1).padStart(2, '0')}</span>
-            </div>
-
+          
             {/* Image Container */}
-            <div className="mb-4 w-full h-48 relative overflow-hidden rounded-lg border border-white/10 group-hover:border-cyan-400/30 transition-all duration-300">
+            <div className="mb-4 w-full h-48 relative overflow-hidden rounded-lg border border-white/10">
               <Image
                 src={card.image}
                 alt={card.title}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
