@@ -87,10 +87,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
         <div className={`absolute top-3 right-3 w-3 h-3 border-r border-t ${config.primary.replace('border-', 'border-r- border-t-')} rounded-tr`}></div>
         <div className={`absolute bottom-3 left-3 w-3 h-3 border-l border-b ${config.primary.replace('border-', 'border-l- border-b-')} rounded-bl`}></div>
         <div className={`absolute bottom-3 right-3 w-3 h-3 border-r border-b ${config.primary.replace('border-', 'border-r- border-b-')} rounded-br`}></div>
-        
-        {/* Scan Line Effect */}
-        <div className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent ${config.scan} to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-[scan_2.5s_linear_infinite]`}></div>
-        
+         
         {/* Directory with Icon */}
         {withIcons && (
           <div className={`p-2.5 rounded-lg ${config.accent} backdrop-blur-sm`}>

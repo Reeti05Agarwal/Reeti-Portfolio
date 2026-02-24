@@ -1,21 +1,19 @@
+// layout.tsx - FIXED VERSION
 import React from "react"
-import type { Metadata, Viewport } from 'next' // Add Viewport import
-import { Geist, Geist_Mono, JetBrains_Mono } from 'next/font/google' 
+import type { Metadata, Viewport } from 'next'
+import { Geist } from 'next/font/google' 
 import Navbar from "@/components/Navbar";  
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const geist = Geist({ subsets: ["latin"] });
-// const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
 
-// VIEWPORT: Separate export (Next.js 15 style)
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
 }
 
-// METADATA: Without viewport
 export const metadata: Metadata = {
   title: 'Reeti | Cybersecurity & Dev Portfolio',
   description: 'Aspiring cybersecurity professional with expertise in CTF, digital forensics, and full-stack development',
@@ -49,17 +47,19 @@ export default function RootLayout({
       <body className={`${geist.className} antialiased bg-background text-foreground`}>
         <div className="cyber-grid" />
         <Navbar /> 
-        <div className="min-h-screen flex flex-col">
+        <main className="min-h-screen flex flex-col">
           {children}
-        </div>
-        {/* <CyberChatbot /> */}
+        </main>
+        
+        {/* FOOTER MOVED INSIDE BODY */}
+        <footer className="relative z-10 mt-8 text-center text-md terminal-glow-cyan py-7">
+          <div className="glass-panel inline-block px-4 py-2 rounded border border-cyan-500/20">
+            system: online | user: reeti | status: active
+          </div>
+        </footer>
+        
         <Analytics />
       </body>
-      <footer className="relative z-10 mt-8 text-center text-md terminal-glow-cyan py-7">
-        <div className="glass-panel inline-block px-4 py-2 rounded border border-cyan-500/20">
-          system: online | user: reeti | status: active
-        </div>
-      </footer>
     </html>
   )
 }

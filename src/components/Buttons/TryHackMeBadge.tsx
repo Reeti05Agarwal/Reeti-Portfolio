@@ -2,14 +2,12 @@ export default function TryhackmeBadge() {
     return (
         <div className="group relative">
             {/* Background Glow Effect */}
-            <div className="absolute -inset-3 bg-gradient-to-br from-cyan-500/20 via-purple-500/10 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+            {/* <div className="absolute -inset-3 bg-gradient-to-br from-cyan-500/20 via-purple-500/10 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div> */}
             
             {/* Main Badge Container */}
-            <div className="relative bg-gradient-to-br from-black/80 via-gray-900/80 to-black/80 border border-cyan-500/30 rounded-xl p-5 backdrop-blur-sm shadow-lg hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition-all duration-300 w-full max-w-xs overflow-hidden">
+            <div className="relative bg-gray-900/30 border border-cyan-500/30 rounded-xl p-5 backdrop-blur-sm shadow-lg hover:border-cyan-400/50  transition-all duration-300 w-full max-w-lg overflow-hidden">
                 
-                {/* Scan Line Effect */}
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-[scan_2s_linear_infinite]"></div>
-                
+                 
                 {/* Corner Decorations */}
                 <div className="absolute top-2 left-2 w-3 h-3 border-l border-t border-cyan-400/50 rounded-tl"></div>
                 <div className="absolute top-2 right-2 w-3 h-3 border-r border-t border-magenta-400/50 rounded-tr"></div>

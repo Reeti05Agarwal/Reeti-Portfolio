@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { hackData } from "@/constants/HackData";   
 import CalenderIcon from "@/components/Icons/calender"
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton"
-import { getColorScheme } from "@/constants/ColorScheme";
+import { getCycledColor as getColorScheme } from "@/constants/ColorScheme";
 import { getProjectIcon } from "@/constants/IconUtils";
 import { Icons } from "@/constants/IconUtils";
 
 export default function HackCard() {
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {hackData.map((card, idx) => {
         const colors = getColorScheme(idx);
         const hasDescription = card.description && card.description.trim() !== '';

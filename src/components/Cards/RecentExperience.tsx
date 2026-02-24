@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { ExperienceData, cardVariants } from "@/constants/ExperienceData";  
-import GithubButton1 from "../Github/GithubButton1";
+import { ExperienceData, cardVariants } from "@/constants/ExperienceData";   
 
 export default function RecentExperience() {
   const recentExp = ExperienceData.slice(0, 4); 
@@ -34,7 +33,7 @@ export default function RecentExperience() {
                     
                     <p className="text-white/70 mt-2 text-sm">{exp.description}</p>
                     <div className="mt-2 py-2 flex justify-between items-center">
-                        <GithubButton1/>
+                        
                          
                 </div>
             </motion.div>

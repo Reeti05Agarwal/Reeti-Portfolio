@@ -10,11 +10,12 @@ export default function Navbar() {
     { name: 'Blogs', href: '/blogs', emoji: ''},
     { name: 'CTF & Writeups', href: '/ctf', emoji: ''},
     { name: 'Experience', href: '/experience', emoji: ''},
-    { name: 'Resume', href: '/resume', emoji: ''},
+    { name: 'Resume', href: '/resume', emoji: ''}, 
+    { name: 'Terminal', href: '/terminal', emoji: ''},
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 border-b border-cyan-500/20 shadow-[0_0_20px_rgba(0,255,255,0.05)] backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-900 border-b border-cyan-500/20 shadow-[0_0_20px_rgba(0,255,255,0.05)] backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
           {/* Logo with glitch effect */}
@@ -39,7 +40,7 @@ export default function Navbar() {
             <div className="relative flex items-center">
               <span className="text-magenta-400">$</span>
               <div className="relative ml-1">
-                <span className="text-cyan-300 animate-pulse">▊</span>
+                {/* <span className="text-cyan-300 animate-pulse">▊</span> */}
                 <div className="absolute -bottom-1 left-0 right-0 h-[1px] bg-gradient-to-r from-cyan-400 to-magenta-400 opacity-0 group-hover:opacity-100 group-hover:animate-[pulse_1s_ease-in-out_infinite]"></div>
               </div>
             </div>

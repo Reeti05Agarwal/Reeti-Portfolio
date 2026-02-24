@@ -1,15 +1,9 @@
 export default function HackTheBoxBadge() {
     return (
-        <div className="group relative">
-            {/* Background Glow Effect - Purple/Blue theme */}
-            <div className="absolute -inset-3 bg-gradient-to-br from-purple-500/20 via-blue-500/10 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-            
+        <div className="group relative"> 
             {/* Main Badge Container */}
-            <div className="relative bg-gradient-to-br from-black/80 via-gray-900/80 to-black/80 border border-purple-500/30 rounded-xl p-5 backdrop-blur-sm shadow-lg hover:border-purple-400/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition-all duration-300 w-full max-w-xs overflow-hidden">
-                
-                {/* Scan Line Effect - Purple theme */}
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-[scan_2s_linear_infinite]"></div>
-                
+            <div className="relative bg-gray-900/30 border border-purple-500/30 rounded-xl p-5 backdrop-blur-sm shadow-lg hover:border-purple-400/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition-all duration-300 w-full max-w-xs overflow-hidden">
+                 
                 {/* Corner Decorations - Purple/Blue theme */}
                 <div className="absolute top-2 left-2 w-3 h-3 border-l border-t border-purple-400/50 rounded-tl"></div>
                 <div className="absolute top-2 right-2 w-3 h-3 border-r border-t border-blue-400/50 rounded-tr"></div>
@@ -77,15 +71,15 @@ export default function HackTheBoxBadge() {
                             <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
                             MACHINES
                         </span>
-                        <span className="text-purple-400/30">|</span>
+                        {/* <span className="text-purple-400/30">|</span>
                         <span className="flex items-center gap-1">
                             <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                             FORTRESS
-                        </span>
+                        </span> */}
                         <span className="text-purple-400/30">|</span>
                         <span className="flex items-center gap-1">
                             <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div>
-                            BATTLEGROUNDS
+                            CTF
                         </span>
                     </div>
                 </div>

@@ -1,58 +1,14 @@
+'use client';
+
 import { motion } from "framer-motion";  
 import { projectData, ProjectData } from "@/constants/ProjectData";
 import GithubButton from "@/components/Buttons/GithubButton";
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton";
 import Image from "next/image"; 
 import { Code, Cpu, Shield, Terminal, Database, Network, Zap, Server, Key, Bug } from "lucide-react";
+import { getCycledColor as getColorScheme } from "@/constants/ColorScheme"; 
 
 export default function ProjectCard() {
-
-  // Different color scheme for projects (more tech-focused colors)
-  const getColorScheme = (index: number) => {
-    const schemes = [
-      { // Teal scheme (for AI/ML projects)
-        primary: 'border-teal-500/30 hover:border-teal-400/50',
-        glow: 'hover:shadow-[0_0_30px_rgba(45,212,191,0.15)]',
-        accent: 'bg-teal-500/20 border-teal-500/30 text-teal-300',
-        icon: 'text-teal-400',
-        badge: 'from-teal-500/20 to-teal-500/10 border-teal-500/30 text-teal-300',
-        gradient: 'from-teal-900/10 via-transparent to-cyan-900/10'
-      },
-      { // Orange scheme (for Security projects)
-        primary: 'border-orange-500/30 hover:border-orange-400/50',
-        glow: 'hover:shadow-[0_0_30px_rgba(249,115,22,0.15)]',
-        accent: 'bg-orange-500/20 border-orange-500/30 text-orange-300',
-        icon: 'text-orange-400',
-        badge: 'from-orange-500/20 to-orange-500/10 border-orange-500/30 text-orange-300',
-        gradient: 'from-orange-900/10 via-transparent to-red-900/10'
-      },
-      { // Indigo scheme (for Web/Fullstack projects)
-        primary: 'border-indigo-500/30 hover:border-indigo-400/50',
-        glow: 'hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]',
-        accent: 'bg-indigo-500/20 border-indigo-500/30 text-indigo-300',
-        icon: 'text-indigo-400',
-        badge: 'from-indigo-500/20 to-indigo-500/10 border-indigo-500/30 text-indigo-300',
-        gradient: 'from-indigo-900/10 via-transparent to-purple-900/10'
-      },
-      { // Emerald scheme (for Data/ML projects)
-        primary: 'border-emerald-500/30 hover:border-emerald-400/50',
-        glow: 'hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]',
-        accent: 'bg-emerald-500/20 border-emerald-500/30 text-emerald-300',
-        icon: 'text-emerald-400',
-        badge: 'from-emerald-500/20 to-emerald-500/10 border-emerald-500/30 text-emerald-300',
-        gradient: 'from-emerald-900/10 via-transparent to-green-900/10'
-      },
-      { // Rose scheme (for Innovation projects)
-        primary: 'border-rose-500/30 hover:border-rose-400/50',
-        glow: 'hover:shadow-[0_0_30px_rgba(244,63,94,0.15)]',
-        accent: 'bg-rose-500/20 border-rose-500/30 text-rose-300',
-        icon: 'text-rose-400',
-        badge: 'from-rose-500/20 to-rose-500/10 border-rose-500/30 text-rose-300',
-        gradient: 'from-rose-900/10 via-transparent to-pink-900/10'
-      }
-    ];
-    return schemes[index % schemes.length];
-  };
 
   // Get project type icon based on title/tags
   const getProjectIcon = (card: ProjectData) => {
@@ -77,15 +33,21 @@ export default function ProjectCard() {
     } else if (titleLower.includes('server') || titleLower.includes('backend') || 
                tagsLower.some(tag => tag.includes('server') || tag.includes('api'))) {
       return <Server className="w-5 h-5" />;
-    } else if (titleLower.includes('crypto') || titleLower.includes('encryption') || 
-               tagsLower.some(tag => tag.includes('crypto') || tag.includes('encrypt'))) {
-      return <Key className="w-5 h-5" />;
-    } else if (titleLower.includes('bug') || titleLower.includes('vulnerability') || 
-               tagsLower.some(tag => tag.includes('bug') || tag.includes('vuln'))) {
-      return <Bug className="w-5 h-5" />;
     } else {
       return <Terminal className="w-5 h-5" />;
     }
+  };
+
+  // Get gradient based on color scheme
+  const getGradient = (index: number) => {
+    const gradients = [
+      'from-blue-900/10 via-transparent to-cyan-900/10',    // Blue scheme
+      'from-purple-900/10 via-transparent to-pink-900/10',  // Purple scheme
+      'from-pink-900/10 via-transparent to-rose-900/10',    // Pink scheme
+      'from-emerald-900/10 via-transparent to-green-900/10',// Green scheme
+      'from-cyan-900/10 via-transparent to-teal-900/10'     // Cyan scheme
+    ];
+    return gradients[index % gradients.length];
   };
 
   return (
@@ -93,8 +55,9 @@ export default function ProjectCard() {
       {projectData.map((card: ProjectData, idx: number) => {
         const hasGithub = card.githubLink && card.githubLink.trim() !== '';
         const hasLink = card.link && card.link.trim() !== '';
-        const colors = getColorScheme(idx);
+        const colors = getColorScheme(idx); // Using centralized function
         const projectIcon = getProjectIcon(card);
+        const gradient = getGradient(idx);
         
         return (
           <motion.article
@@ -105,31 +68,29 @@ export default function ProjectCard() {
             className="group relative flex flex-col bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-gray-900/80 border border-cyan-500/20 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:border-cyan-400/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
           >
             {/* Unique background gradient overlay */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}></div>
+            <div className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}></div>
             
-            {/* Diagonal corner decorations (different from CTF cards) */}
+            {/* Diagonal corner decorations */}
             <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-cyan-400/30 rounded-tl"></div>
             <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-magenta-400/30 rounded-tr"></div>
             <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-cyan-400/30 rounded-bl"></div>
             <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-magenta-400/30 rounded-br"></div>
             
-            {/* Project ID Badge (different styling) */}
+            {/* Project ID Badge */}
             <div className="absolute -top-5 -right-2 bg-black/80 border border-cyan-500/30 rounded-lg px-2 py-1 backdrop-blur-sm rotate-3">
               <span className="text-xs text-cyan-300 font-mono">PROJ_{String(idx + 1).padStart(2, '0')}</span>
             </div>
 
-            {/* Image Container with unique styling */}
-            
+            {/* Image Container */}
             <div className="mb-4 w-full h-48 relative overflow-hidden rounded-lg border border-white/10 group-hover:border-cyan-400/30 transition-all duration-300">
-              
               <Image
                 src={card.image}
                 alt={card.title}
                 fill
-                className="object-cover transition-transform duration-500"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              </div>
+            </div>
 
             {/* Header with Project Icon */}
             <div className="mb-4 flex items-start justify-between">
@@ -138,7 +99,6 @@ export default function ProjectCard() {
                   {projectIcon}
                 </div>
                 <div>
-                  
                   <h2 className="text-lg font-bold text-white transition-colors duration-300 font-mono">
                     {card.title}
                   </h2>
@@ -150,7 +110,7 @@ export default function ProjectCard() {
               </div>
             </div>
             
-            {/* Description with different layout */}
+            {/* Description */}
             <div className="mb-4 p-3 rounded-lg bg-black/30 border border-white/10 backdrop-blur-sm">
               <div className="flex items-start gap-3">
                 <div className={`p-1.5 rounded ${colors.accent} flex-shrink-0 mt-0.5`}>
@@ -163,7 +123,7 @@ export default function ProjectCard() {
               </div>
             </div>
 
-            {/* Tags with different styling */}
+            {/* Tags */}
             <div className="mb-4">
               <div className="flex flex-wrap gap-2">
                 {card.tags.map((tag, tagIdx) => (
@@ -177,10 +137,10 @@ export default function ProjectCard() {
               </div>
             </div>
 
-            {/* Links with different layout */}
+            {/* Links */}
             <div className="mt-auto pt-3 border-t border-cyan-500/20">
               <div className={`flex gap-2 ${!hasGithub || !hasLink ? 'flex-col' : ''}`}>
-                {/* Read More Button - only if project link exists */}
+                {/* Read More Button */}
                 {hasLink && (
                   <a 
                     href={card.link}
@@ -197,7 +157,7 @@ export default function ProjectCard() {
                   </a>
                 )}
                 
-                {/* GitHub Button - only if github link exists */}
+                {/* GitHub Button */}
                 {hasGithub && (
                   <a 
                     href={card.githubLink}
@@ -212,9 +172,7 @@ export default function ProjectCard() {
                   </a>
                 )}
                 
-                
-                
-                {/* Fallback if no links exist */}
+                {/* Fallback */}
                 {!hasGithub && !hasLink && (
                   <div className="w-full text-center py-3 text-white/50 text-sm font-mono">
                     [NO LINKS AVAILABLE]
@@ -222,8 +180,6 @@ export default function ProjectCard() {
                 )}
               </div>
             </div>
-
-             
           </motion.article>
         );
       })}

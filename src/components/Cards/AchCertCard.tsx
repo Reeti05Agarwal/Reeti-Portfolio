@@ -5,7 +5,7 @@ import { certData, CertData } from "@/constants/CertData";
 import CalenderIcon from "@/components/Icons/calender";
 import ReadMoreButton from "@/components/Buttons/ReadMoreButton";
 import CertVerificationButton from '@/components/Buttons/CertVerificationButton';
-import { getColorScheme } from "@/constants/ColorScheme";
+import { getCycledColor as getColorScheme } from "@/constants/ColorScheme";
 import { getProjectIcon } from "@/constants/IconUtils";
 import { Icons } from "@/constants/IconUtils";
 import { Star, Award } from "lucide-react";

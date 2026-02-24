@@ -678,6 +678,23 @@ a {
   }
 }
 
+@keyframes subtleScan {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      5% {
+        opacity: 0.3;
+      }
+      95% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+
 /* Text Glow Effects */
 .terminal-text-glow {
   text-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
@@ -757,11 +774,7 @@ a {
   z-index: -1;
 }
 
-/* Cyberpunk Aesthetic Utilities */
-.cyber-glow {
-  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-  filter: drop-shadow(0 0 15px currentColor);
-}
+ 
 
 .cyber-border {
   border: 1px solid;

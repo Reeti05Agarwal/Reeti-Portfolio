@@ -1,6 +1,7 @@
 'use client';
 import { motion } from "framer-motion"; 
-import ExperienceCard from "@/components/Cards/ExperienceCard"; 
+import ExperienceCard from "@/components/Cards/ExperienceCard";  
+
 import SectionHeading from "@/components/ui/SectionHeading";
 
 
@@ -21,7 +22,7 @@ export default function ExperiencePage() {
         </div>  
       </motion.div>
       
-      <ExperienceCard />
+      <ExperienceCard /> 
     </main>
   );
 }

@@ -9,7 +9,7 @@ export default function HeroLeftContent() {
       {/* Header */}
       <div className="space-y-2">
         <p className="text-cyan-400 font-mono text-sm sm:text-base">$ whoami</p>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground cyber-glow">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
           Reeti Agarwal
         </h1>
         <p className="text-lg sm:text-xl text-gren-400 font-mono">

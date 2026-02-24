@@ -47,7 +47,7 @@ export default function TechStackSection() {
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
             <span className="text-cyan-400 font-mono text-sm">reeti@cybersec:~$ tech_arsenal</span>
           </div>
-          <h2 className="text-2xl font-bold text-white font-mono tracking-wider mb-2 cyber-glow">
+          <h2 className="text-2xl font-bold text-white font-mono tracking-wider mb-2">
             TECH STACK TERMINAL
           </h2>
           <p className="text-cyan-400/70 font-mono text-sm">
@@ -80,21 +80,7 @@ export default function TechStackSection() {
         </div>
 
         {/* Active Panel */}
-        <div className="border border-cyan-500/20 rounded-xl p-6 bg-black/30 backdrop-blur-sm">
-          {/* Active tab header */}
-          {activeTabData && (
-            <div className="mb-4 flex items-center gap-3">
-              <div className={`w-3 h-3 bg-${activeTabData.color}-500 rounded-full animate-pulse`}></div>
-              <span className={`text-${activeTabData.color}-400 font-mono`}>
-                {activeTabData.id === 'cyber' && 'CYBER SECURITY DOMAINS'}
-                {activeTabData.id === 'lang' && 'PROGRAMMING LANGUAGES'}
-                {activeTabData.id === 'tools' && 'SECURITY TOOLS & FRAMEWORKS'}
-              </span>
-              <span className="ml-auto text-xs text-cyan-400/50 font-mono">[SELECTED]</span>
-            </div>
-          )}
-          
-          {/* Active content */}
+        <div className="bg-black/30 backdrop-blur-sm">
           {getTabContent()}
         </div>
 
@@ -102,8 +88,7 @@ export default function TechStackSection() {
         <div className="mt-6 pt-6 border-t border-cyan-500/20">
           <div className="flex justify-between items-center text-xs font-mono">
             <span className="text-white/50">[TECH_STACK_v2.5]</span>
-            <span className="text-cyan-400/70">Last updated: {new Date().toLocaleDateString()}</span>
-            <span className="text-green-400/70 flex items-center gap-1">
+             <span className="text-green-400/70 flex items-center gap-1">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               DATABASE_SYNCED
             </span>

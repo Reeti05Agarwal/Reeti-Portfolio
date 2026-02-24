@@ -6,7 +6,7 @@ export default function HeroProfilePicture() {
   return (
     <div className="relative flex items-center justify-center">
       {/* Outer Glow Ring */}
-      <div className="absolute w-[340px] h-[340px] bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
+      {/* <div className="absolute w-[340px] h-[340px] bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-cyan-500/20 rounded-full blur-xl animate-pulse"></div> */}
       
       {/* Cyberpunk Frame */}
       <div className="relative w-80 h-80">
@@ -27,7 +27,7 @@ export default function HeroProfilePicture() {
         </div>
 
         {/* Profile Picture Container */}
-        <div className="absolute inset-4 rounded-full overflow-hidden border border-cyan-400/10 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm">
+        <div className="absolute inset-4 rounded-full overflow-hidden border border-cyan-400/10 backdrop-blur-sm">
           {/* Fallback placeholder */}
           <div className="w-full h-full flex items-center justify-center relative group">
             <div className="text-6xl font-bold text-cyan-400/70 font-mono">
@@ -43,7 +43,7 @@ export default function HeroProfilePicture() {
           
           {/* Actual Image */}
           <Image 
-            src="/public/REETI_PROFILE_PIC.jpg" 
+            src="/images/profile/profile.png" 
             alt="Reeti Agarwal"
             fill
             className="object-cover"
@@ -52,17 +52,17 @@ export default function HeroProfilePicture() {
         </div>
 
         {/* Floating Security Badges */}
-        <div className="absolute -top-2 -right-2 w-16 h-16 bg-black/80 border border-cyan-400/30 rounded-lg p-2 backdrop-blur-sm rotate-12">
+        <div className="absolute -top-2 -right-2 w-16 h-16 bg-black/80 border border-green-400/70 rounded-lg p-2 backdrop-blur-sm rotate-12">
           <div className="text-center">
-            <div className="text-cyan-400 text-xl">⚡</div>
-            <span className="text-[10px] text-cyan-300 font-mono">eJPT</span>
+            <div className="text-green-400 text-xl">⚡</div>
+            <span className="text-[10px] text-green-300 font-mono">eJPT</span>
           </div>
         </div>
         
-        <div className="absolute -bottom-2 -left-2 w-14 h-14 bg-black/80 border border-magenta-400/30 rounded-lg p-2 backdrop-blur-sm -rotate-6">
+        <div className="absolute -bottom-2 -left-2 w-14 h-16 bg-black/80 border border-green-400/70 rounded-lg p-2 backdrop-blur-sm -rotate-6">
           <div className="text-center">
-            <div className="text-magenta-400 text-lg">🛡️</div>
-            <span className="text-[9px] text-magenta-300 font-mono">CTF</span>
+            <div className="text-green-400 text-lg">🛡️</div>
+            <span className="text-[9px] text-green-300 font-mono">CTF</span>
           </div>
         </div>
 
