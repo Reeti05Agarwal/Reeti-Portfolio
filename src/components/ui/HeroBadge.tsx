@@ -3,6 +3,7 @@ import React from 'react';
 
 export default function HeroBadges() {
   const badges = [
+    { text: 'eWPT Certified', color: 'yellow' }
     { text: 'eJPT Certified', color: 'cyan' },
     { text: 'CTF Player', color: 'pink' },
     { text: 'Digital Forensics', color: 'cyan' },
