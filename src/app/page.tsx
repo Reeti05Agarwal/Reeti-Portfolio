@@ -74,7 +74,7 @@ export default function Home() {
           <AchievementSection />
         </section>
 
-        <section className="my-1">
+        <section className="my-1" id="contact">
           <ContactSection />
         </section>
 
